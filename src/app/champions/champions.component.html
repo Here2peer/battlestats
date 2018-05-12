@@ -1,3 +1,30 @@
-<div>
+<div class="champion-wrapper">
+  <div class="champion-group" >
+    <ul class="champion-cat">
 
+      <h2>Melee</h2>
+      <li class="mat-card champion" *ngFor="let results of melee">
+        <img class="portrait" src="{{results.portrait}}">
+        <h4 class="mat-card-title">{{results.name}}</h4>
+      </li>
+    </ul>
+
+    <ul class="champion-cat">
+      <h2>Ranged</h2>
+
+      <li class="mat-card champion" *ngFor="let results of ranged">
+        <img class="portrait" src="{{results.portrait}}">
+        <h4 class="mat-card-title"> {{results.name}}</h4>
+      </li>
+     </ul>
+
+    <ul  class="champion-cat champion">
+      <h2>Support</h2>
+      <li class="mat-card" *ngFor="let results of support">
+        <img class="portrait" src="{{results.portrait}}">
+        <h4 class="mat-card-title"> {{results.name}} </h4>
+      </li>
+
+    </ul>
+  </div>
 </div>
