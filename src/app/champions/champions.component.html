@@ -18,9 +18,10 @@
       </li>
      </ul>
 
-    <ul  class="champion-cat champion">
+    <ul  class="champion-cat">
       <h2>Support</h2>
-      <li class="mat-card" *ngFor="let results of support">
+
+      <li class="mat-card champion" *ngFor="let results of support">
         <img class="portrait" src="{{results.portrait}}">
         <h4 class="mat-card-title"> {{results.name}} </h4>
       </li>
