@@ -1,14 +1,15 @@
 {
   "champions": {
     "melee":[
-      {"id": 1, "name": "Bakko", "portrait": "../assets/bakko-portrait.png", "desc": "HERO OF BOULDER PASS","lore": "Bakko has a proud history, filled with bravery and courage. Most known for saving hundreds of people from getting slaughtered by the giants in the north. A heroic brawler armed with axe and shield. Bakko uses his shield to outmaneuver opponents and protect his teammates. Watch out for his earth shattering dash attacks, even calm warriors sometimes go berserk." ,"skills": [
-        {"name": "War Axe", "desc": "Swing your axe to deal damage. Each charge increases the power of Blood Axe.", "icon": "./skills/waraxe.png"},
-        {"name": "Blood Axe", "desc": "Throw an axe that deals damage. Deals bonus damage for each weapon charge.", "icon": "./skills/bloodaxe.png"},
-        {"name": "Valiant Leap", "desc": "Leap into the air and strike down upon your enemies dealing damage and inflicting Snare.", "icon": "./skills/valiantleap.png"},
-        {"name": "Bulwark", "desc": "Put up your shield and block incoming attacks. Reflects enemy projectiles and inflicts Stun on enemy melee attackers.", "icon": "./skills/bulwark.png"},
-        {"name": "Shield Dash", "desc": "Dash forward and push an enemy in front of you. Pushing an enemy into a wall deals damage.", "icon": "./skills/shielddash.png"},
-        {"name": "War Shout", "desc": "Let loose a War Shout that shields all nearby allies absorbing damage.", "icon": "./skills/warshout.png"},
-        {"name": "Heroic Charge", "desc": "Rush forward and grab an enemy dealing damage and pushing it in front of you. Deals area damage and inflicts Stun when reaching max distance or when colliding with a wall or another enemy.", "icon": "./skills/heroiccharge.png"}
+      {"id": 1, "name": "Bakko", "portrait": "../assets/bakko-portrait.png", "desc": "HERO OF BOULDER PASS","lore": "Bakko has a proud history, filled with bravery and courage. Most known for saving hundreds of people from getting slaughtered by the giants in the north. A heroic brawler armed with axe and shield. Bakko uses his shield to outmaneuver opponents and protect his teammates. Watch out for his earth shattering dash attacks, even calm warriors sometimes go berserk.",
+        "skills": [
+          {"name": "War Axe", "desc": "Swing your axe to deal damage. Each charge increases the power of Blood Axe.", "icon": "./skills/waraxe.png"},
+          {"name": "Blood Axe", "desc": "Throw an axe that deals damage. Deals bonus damage for each weapon charge.", "icon": "./skills/bloodaxe.png"},
+          {"name": "Valiant Leap", "desc": "Leap into the air and strike down upon your enemies dealing damage and inflicting Snare.", "icon": "./skills/valiantleap.png"},
+          {"name": "Bulwark", "desc": "Put up your shield and block incoming attacks. Reflects enemy projectiles and inflicts Stun on enemy melee attackers.", "icon": "./skills/bulwark.png"},
+          {"name": "Shield Dash", "desc": "Dash forward and push an enemy in front of you. Pushing an enemy into a wall deals damage.", "icon": "./skills/shielddash.png"},
+          {"name": "War Shout", "desc": "Let loose a War Shout that shields all nearby allies absorbing damage.", "icon": "./skills/warshout.png"},
+          {"name": "Heroic Charge", "desc": "Rush forward and grab an enemy dealing damage and pushing it in front of you. Deals area damage and inflicts Stun when reaching max distance or when colliding with a wall or another enemy.", "icon": "./skills/heroiccharge.png"}
         ]
       }],
     "ranged": [
