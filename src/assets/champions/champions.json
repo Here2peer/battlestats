@@ -9,14 +9,13 @@
         {"name": "Shield Dash", "desc": "Dash forward and push an enemy in front of you. Pushing an enemy into a wall deals damage.", "icon": "./skills/shielddash.png"},
         {"name": "War Shout", "desc": "Let loose a War Shout that shields all nearby allies absorbing damage.", "icon": "./skills/warshout.png"},
         {"name": "Heroic Charge", "desc": "Rush forward and grab an enemy dealing damage and pushing it in front of you. Deals area damage and inflicts Stun when reaching max distance or when colliding with a wall or another enemy.", "icon": "./skills/heroiccharge.png"}
-        ]}
-      
-      ],
+        ]
+      }],
     "ranged": [
-      
+
       ],
     "support": [
-      
+
       ]
   }
 }
