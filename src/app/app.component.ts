@@ -7,10 +7,20 @@ import {NavigationService} from './navigation/navigation.service';
   styleUrls: ['./app.component.css'],
   providers: [NavigationService]
 })
+
+
+
+
+
 export class AppComponent {
   title = 'app';
+
+
+
   constructor(private navigationService: NavigationService) {
   }
+
+
 
   @HostListener('click')
   click() {

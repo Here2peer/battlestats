@@ -4,6 +4,10 @@ body {
   background: #031737;
 }
 
+p{
+  color: white;
+}
+
 html,
 body {
   font-family: 'Roboto', sans-serif;
@@ -31,7 +35,6 @@ a {
 
 /* HEADER */
 .header {
-  position: fixed;
   left: 0;
   right: 0;
   height: 66px;
@@ -59,7 +62,7 @@ a {
 
 .logo {
   text-align: center;
-  padding: 0 10px;
+  padding: 10px 10px;
   max-height: 40px;
 }
 
