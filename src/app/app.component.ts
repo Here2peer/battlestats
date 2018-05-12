@@ -9,9 +9,7 @@ import {NavigationService} from './navigation/navigation.service';
 })
 export class AppComponent {
   title = 'app';
-  navigationService;
   constructor(private navigationService: NavigationService) {
-    this.navigationService = navigationService;
   }
 
   @HostListener('click')

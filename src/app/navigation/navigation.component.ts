@@ -15,8 +15,8 @@ export class NavigationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.navigationService.change.subscribe(isMobile => {
-      this.isMobile = isMobile;
+    this.navigationService.change.subscribe(mobile => {
+      this.mobile = mobile;
     });
   }
 
