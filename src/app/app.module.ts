@@ -12,6 +12,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LandingComponent } from './modules/landing/landing.component';
 import { ChampionsComponent } from './champions/champions.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {MaterialModule} from './modules/material/material.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

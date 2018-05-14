@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ChampionsService} from './champions.service';
+import { MaterialModule} from '../modules/material/material.module';
+import {MatCardModule} from '@angular/material';
 
 @Component({
   selector: 'app-champions',
