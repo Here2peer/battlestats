@@ -3,11 +3,16 @@
   border-style: dashed;
 }
 
-.user-image{
-  height: 50px;
+.user-image {
+  height: 100px;
 }
 
-.div-tile {
-  text-align: left;
-  border-style: dashed;
+.player{
+  max-width: 750px;
+  text-align: center;
+  color: black;
+}
+
+li{
+  list-style: none;
 }

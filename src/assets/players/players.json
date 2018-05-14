@@ -1,0 +1,18 @@
+{
+  "players": {
+    "coolPlayers": [
+      {
+        "name": "player1",
+        "rank": 1,
+        "kd": 1.5,
+        "profileImage": "../../assets/players/profileImages/index.png"
+      },
+      {
+        "name": "player2",
+        "rank": 3,
+        "kd": 0.75,
+        "profileImage": "../../assets/players/profileImages/kermit.png"
+      }
+    ]
+  }
+}

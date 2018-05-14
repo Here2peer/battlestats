@@ -1,11 +1,25 @@
-<div class="user-container">
-  <mat-grid-list cols="3" rowHeight="100">
-    <mat-grid-tile [colspan]="1">username</mat-grid-tile>
-    <mat-grid-tile>info1</mat-grid-tile>
-    <mat-grid-tile>info2</mat-grid-tile>
-    <mat-grid-tile [rowspan]="2"><img class="user-image" src="../../assets/navigation/logo-small.png"></mat-grid-tile>
-     <mat-grid-tile>1</mat-grid-tile>
-     <mat-grid-tile>2</mat-grid-tile>
-  </mat-grid-list>
+<ul>
+  <li class="mat-card player" *ngFor="let results of coolPlayers">
+    <div class="user-container">
+      <mat-grid-list cols="7" rowHeight="100" >
 
-</div>
+        <mat-grid-tile>{{results.name}}</mat-grid-tile>
+        <mat-grid-tile>rank</mat-grid-tile>
+        <mat-grid-tile>k/d</mat-grid-tile>
+        <mat-grid-tile>moar stats</mat-grid-tile>
+        <mat-grid-tile>moar stats</mat-grid-tile>
+        <mat-grid-tile>moar stats</mat-grid-tile>
+        <mat-grid-tile>moar stats</mat-grid-tile>
+
+        <mat-grid-tile [rowspan]="1"><img class="user-image" src={{results.profileImage}}></mat-grid-tile>
+        <mat-grid-tile>{{results.rank}}</mat-grid-tile>
+        <mat-grid-tile>{{results.kd}}</mat-grid-tile>
+        <mat-grid-tile>3</mat-grid-tile>
+        <mat-grid-tile>4</mat-grid-tile>
+        <mat-grid-tile>5</mat-grid-tile>
+        <mat-grid-tile>6</mat-grid-tile>
+
+      </mat-grid-list>
+    </div>
+  </li>
+</ul>
