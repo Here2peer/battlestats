@@ -1,0 +1,13 @@
+.user-container {
+  padding: 10px 10px;
+  border-style: dashed;
+}
+
+.user-image{
+  height: 50px;
+}
+
+.div-tile {
+  text-align: left;
+  border-style: dashed;
+}
