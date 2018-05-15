@@ -1,6 +1,5 @@
 .user-container {
   padding: 10px 10px;
-  border-style: dashed;
 }
 
 .user-image{
@@ -9,5 +8,14 @@
 
 .div-tile {
   text-align: left;
-  border-style: dashed;
+}
+
+.mat-grid-tile {
+  background: lightgray;
+  color: #031737;
+}
+
+.tileTitle{
+  background: none;
+  color: lightgray;
 }

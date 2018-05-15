@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {ChampionsService} from './champions.service';
-import { MaterialModule} from '../modules/material/material.module';
-import {MatCardModule} from '@angular/material';
 
 @Component({
   selector: 'app-champions',
@@ -21,7 +19,6 @@ export class ChampionsComponent implements OnInit {
 
   ngOnInit() {
     this.championsService.getChampions().subscribe((data: any) => {
-        console.log(data);
         this.catagory = data['champions'];
         this.melee = this.catagory['melee'];
         this.ranged = this.catagory['ranged'];

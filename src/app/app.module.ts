@@ -13,6 +13,8 @@ import { LandingComponent } from './modules/landing/landing.component';
 import { ChampionsComponent } from './champions/champions.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {MaterialModule} from './modules/material/material.module';
+import { SteamAuthComponent } from './steam-auth/steam-auth.component';
+import { TournamentComponent } from './tournament/tournament.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import {MaterialModule} from './modules/material/material.module';
     PlayerStatsComponent,
     PageNotFoundComponent,
     LandingComponent,
-    ChampionsComponent
+    ChampionsComponent,
+    SteamAuthComponent,
+    TournamentComponent
   ],
   imports: [
     BrowserModule,
