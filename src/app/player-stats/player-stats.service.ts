@@ -8,7 +8,7 @@ export class PlayerStatsService {
   constructor(private http: HttpClient) {}
 
   getPlayerStats() {
-    return this.http.get('./assets/players/players.json');
+    return this.http.get('./assets/players/player.json');
   }
 
 }

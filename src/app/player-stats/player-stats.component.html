@@ -1,25 +1,28 @@
-<ul>
-  <li class="mat-card player" *ngFor="let results of coolPlayers">
-    <div class="user-container">
-      <mat-grid-list cols="7" rowHeight="100" >
 
-        <mat-grid-tile>{{results.name}}</mat-grid-tile>
-        <mat-grid-tile>rank</mat-grid-tile>
-        <mat-grid-tile>k/d</mat-grid-tile>
-        <mat-grid-tile>moar stats</mat-grid-tile>
-        <mat-grid-tile>moar stats</mat-grid-tile>
-        <mat-grid-tile>moar stats</mat-grid-tile>
-        <mat-grid-tile>moar stats</mat-grid-tile>
+<div class="user-container">
+  <mat-grid-list cols="9" rowHeight="75" >
 
-        <mat-grid-tile [rowspan]="1"><img class="user-image" src={{results.profileImage}}></mat-grid-tile>
-        <mat-grid-tile>{{results.rank}}</mat-grid-tile>
-        <mat-grid-tile>{{results.kd}}</mat-grid-tile>
-        <mat-grid-tile>3</mat-grid-tile>
-        <mat-grid-tile>4</mat-grid-tile>
-        <mat-grid-tile>5</mat-grid-tile>
-        <mat-grid-tile>6</mat-grid-tile>
+    <mat-grid-tile [colspan]="2">{{att.name}}</mat-grid-tile>
+    <mat-grid-tile [colspan]="1">rank</mat-grid-tile>
+    <mat-grid-tile [colspan]="1">wins</mat-grid-tile>
+    <mat-grid-tile [colspan]="1">losses</mat-grid-tile>
+    <mat-grid-tile [colspan]="2">moar stats</mat-grid-tile>
+    <mat-grid-tile [colspan]="2">moar stats</mat-grid-tile>
 
-      </mat-grid-list>
-    </div>
-  </li>
-</ul>
+    <mat-grid-tile [colspan]="2"><img class="user-image" src="../../assets/players/profileImages/index.png"></mat-grid-tile>
+    <mat-grid-tile [colspan]="1">3</mat-grid-tile><!-- rank -->
+    <mat-grid-tile [colspan]="1">4</mat-grid-tile><!-- wins -->
+    <mat-grid-tile [colspan]="1">5</mat-grid-tile><!-- losses -->
+    <mat-grid-tile [colspan]="2">6</mat-grid-tile><!-- moar stats -->
+    <mat-grid-tile [colspan]="2">6</mat-grid-tile><!-- moar stats -->
+
+    <mat-grid-tile [colspan]="9"></mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2"></mat-grid-tile>
+    <mat-grid-tile [colspan]="2"></mat-grid-tile>
+
+
+
+
+  </mat-grid-list>
+</div>

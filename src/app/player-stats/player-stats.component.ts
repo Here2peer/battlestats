@@ -8,16 +8,20 @@ import {PlayerStatsService} from './player-stats.service';
   providers: [PlayerStatsService]
 })
 export class PlayerStatsComponent implements OnInit {
-  players: any;
-  coolPlayers: any;
+  playerData: any;
+  att: any;
+  links: any;
+  meta: any;
 
   constructor(private playerStatsService: PlayerStatsService) { }
 
   ngOnInit() {
     this.playerStatsService.getPlayerStats().subscribe((data: any) => {
         console.log(data);
-        this.players = data['players'];
-        this.coolPlayers = this.players['coolPlayers'];
+        this.playerData = data['data'];
+        this.att = this.playerData['attributes'];
+        this.links = data['links'];
+        this.meta = data['meta'];
       }
     );
   }
