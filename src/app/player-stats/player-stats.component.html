@@ -78,7 +78,7 @@
   </div>
 
   <div class="champions-container">
-    <table >
+    <table>
       <tr>
         <th colspan="2">Champion</th>
         <th>Time Played</th>
@@ -103,11 +103,11 @@
             <tr>
               <td><img class="champion-image" src="../../assets/champions/images/{{thing.Icon}}.jpg"></td>
               <td>
-                <table>
-                  <tr><td> {{thing.EnglishLocalizedName}}</td></tr>
-                  <tr><td style="font-size: small" colspan="1">wins {{stats[thing.StackableId+1000]}}, losses {{stats[thing.StackableId+2000]}}</td></tr>
-                  <tr><td style="font-size: small" colspan="1">level {{stats[thing.StackableId+29000]}}, {{stats[thing.StackableId]}} xp</td></tr>
-                </table>
+                {{thing.EnglishLocalizedName}}<br>
+                <div style="font-size: small;">
+                  wins {{stats[thing.StackableId+1000]}}, losses {{stats[thing.StackableId+2000]}}<br>
+                  level {{stats[thing.StackableId+29000]}}, {{stats[thing.StackableId]}} xp
+                </div>
               </td>
 
               <td> {{stats[thing.StackableId+5000]}}</td>
@@ -128,16 +128,6 @@
           </ng-container>
         </ng-container>
       </ng-container>
-      <tr>
-        <td>{{statsMapping[1001].map}}</td>
-        <td>{{stats[1001]}}</td>
-        <td>{{stats[1101]}}</td>
-      </tr>
-      <tr>
-        <td>{{statsMapping[1001].map}}</td>
-        <td>{{stats[1001]}}</td>
-        <td>{{stats[1101]}}</td>
-      </tr>
     </table>
   </div>
 </div>
