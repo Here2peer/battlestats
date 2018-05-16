@@ -3,16 +3,25 @@
     <ul class="champion-cat">
 
       <h2>Melee</h2>
-      <mat-card class="champion" *ngFor="let champion of melee">
-        <mat-card-header>
-        <mat-card-title class="">{{champion.name}}</mat-card-title>
-        <mat-card-subtitle class="mat-card-description">{{champion.desc}}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image	src="{{champion.portrait}}">
+      <mat-card class="champion" [ngClass]="{'active': champion.active}"  *ngFor="let champion of melee">
+        <div (click)="activateClass(champion)">
+          <mat-card-header>
+            <mat-card-title class="">{{champion.name}}</mat-card-title>
+            <mat-card-subtitle class="mat-card-description">{{champion.desc}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image	src="{{champion.portrait}}">
+        </div>
         <mat-card-content>
-        <li class="skills" *ngFor="let skills of champion['skills']">
-          <img mat-card-image src="{{skills.icon}}">
-        </li>
+        <mat-card class="skills " [ngClass]="{'active': skills.active}" *ngFor="let skills of champion['skills']">
+          <img  mat-card-image src="{{skills.icon}}">
+
+        </mat-card>
+          <button (click)="{'active': activateSkills(skills)}" >Skills</button>
+        </mat-card-content>
+
+        <button>Lore</button>
+        <mat-card-content class="lore" [class]="active">
+          <p>{{champion.lore}}</p>
         </mat-card-content>
 
       </mat-card>
@@ -21,21 +30,25 @@
 
     <ul class="champion-cat">
       <h2>Ranged</h2>
-
-      <mat-card class="champion" *ngFor="let champion of ranged">
-
-        <mat-card-header>
-          <mat-card-title class="">{{champion.name}}</mat-card-title>
-          <mat-card-subtitle class="mat-card-description">{{champion.desc}}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image	src="{{champion.portrait}}">
+      <mat-card class="champion" [ngClass]="{'active': champion.active}"  *ngFor="let champion of ranged">
+        <div (click)="activateClass(champion)">
+          <mat-card-header>
+            <mat-card-title class="">{{champion.name}}</mat-card-title>
+            <mat-card-subtitle class="mat-card-description">{{champion.desc}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image	src="{{champion.portrait}}">
+        </div>
         <mat-card-content>
-          <li class="skills" *ngFor="let skills of champion['skills']">
+          <mat-card class="skills " [ngClass]="{'active': champion.active}" *ngFor="let skills of champion['skills']">
             <img mat-card-image src="{{skills.icon}}">
-          </li>
+          </mat-card>
+          <button>Skills</button>
         </mat-card-content>
 
-
+        <button (click)="activateClass(champion)">Lore</button>
+        <mat-card-content class="lore" [ngClass]="{'active': !champion.lore}" >
+          <p>{{champion.lore}}</p>
+        </mat-card-content>
 
       </mat-card>
 
@@ -43,18 +56,24 @@
 
     <ul  class="champion-cat">
       <h2>Support</h2>
-
-      <mat-card class="champion" *ngFor="let champion of support">
-
-        <mat-card-header>
-          <mat-card-title class="">{{champion.name}}</mat-card-title>
-          <mat-card-subtitle class="mat-card-description">{{champion.desc}}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image	src="{{champion.portrait}}">
+      <mat-card class="champion" [ngClass]="{'active': champion.active}"  *ngFor="let champion of support">
+        <div (click)="activateClass(champion)">
+          <mat-card-header>
+            <mat-card-title class="">{{champion.name}}</mat-card-title>
+            <mat-card-subtitle class="mat-card-description">{{champion.desc}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image	src="{{champion.portrait}}">
+        </div>
         <mat-card-content>
-          <li class="skills" *ngFor="let skills of champion['skills']">
+          <mat-card class="skills " [ngClass]="{'active': champion.active}" *ngFor="let skills of champion['skills']">
             <img mat-card-image src="{{skills.icon}}">
-          </li>
+          </mat-card>
+          <button>Skills</button>
+        </mat-card-content>
+
+        <button (click)="activateClass(champion)">Lore</button>
+        <mat-card-content class="lore" [ngClass]="{'active': !champion.lore}" >
+          <p>{{champion.lore}}</p>
         </mat-card-content>
 
       </mat-card>

@@ -1,6 +1,6 @@
 <div class="landingwrapper">
-  <div class="newswrapper">
 
+  <div class="newswrapper">
     <mat-expansion-panel class="mat-expansion-panel" *ngFor="let results of news">
       <mat-expansion-panel-header>
         <mat-panel-title class="mat-panel-title">
@@ -8,9 +8,9 @@
         </mat-panel-title>
       </mat-expansion-panel-header>
 
-      <p>{{results.url}}</p>
+      <a href="{{results.url}}"> Link to article.</a>
 
     </mat-expansion-panel>
-
   </div>
+
 </div>

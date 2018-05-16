@@ -2,12 +2,12 @@
   max-width: 70%;
   margin: 0 auto;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .newswrapper{
   color: lightgray !important;
-  max-width: 30%;
+  max-width: 40%;
   float: right;
 }
 
@@ -23,3 +23,15 @@
 .mat-panel-title {
   margin: 0 auto;
 }
+
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1000px) {
+  .newswrapper{
+    color: lightgray !important;
+    max-width: 100%;
+    float: right;
+  }
+}
+
+
