@@ -89,7 +89,7 @@
         <ng-container *ngIf ="thing.StackableId>12000">
           <ng-container *ngIf="thing.StackableId < 13000">
             <tr>
-              <td> {{thing.Icon}}</td>
+              <td> <img class="user-image" src="../../assets/champions/images/{{thing.Icon}}.png"></td>
               <td> {{thing.EnglishLocalizedName}}</td>
               <td> {{stats[thing.StackableId]}}</td>
               <td> {{stats[thing.StackableId+1000]}}</td>
