@@ -82,7 +82,7 @@
     <ng-container *ngFor="let item of gameplay">
       {{item.name}}
       {{item.description}}
-      <img src="../../assets/champions"
+      <img src="../../assets/champions/images/{{item.icon}}.jpg">
       <ng-container *ngFor="let skills of gameplay.battlerites">
         {{skills.name}}
         {{skills.description}}
