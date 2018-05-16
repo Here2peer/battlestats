@@ -80,7 +80,13 @@
 
     </ul>
     <ng-container *ngFor="let item of gameplay">
-      {{item.devName}}
+      {{item.name}}
+      {{item.description}}
+      <img src="../../assets/champions"
+      <ng-container *ngFor="let skills of gameplay.battlerites">
+        {{skills.name}}
+        {{skills.description}}
+      </ng-container>
     </ng-container>
   </div>
 </div>
