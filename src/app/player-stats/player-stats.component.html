@@ -82,19 +82,59 @@
       <tr>
         <th colspan="2">Champion icon</th>
         <th>Champion</th>
-        <th>Champion Wins</th>
-        <th>Champion Losses</th>
+        <th>Wins</th>
+        <th>Losses</th>
+        <th>XP</th>
+        <th>Level</th>
+        <th>Kills</th>
+        <th>Deaths</th>
+        <th>Time Played</th>
+
+        <th>Ranked 2v2 wins</th>
+        <th>Ranked 2v2 losses</th>
+        <th>Ranked 3v3 wins</th>
+        <th>Ranked 3v3 losses</th>
+        <th>Unranked 2v2 wins</th>
+        <th>Unranked 2v2 losses</th>
+        <th>Unranked 3v3 wins</th>
+        <th>Unranked 3v3 losses</th>
+
+        <th>Brawl wins</th>
+        <th>Brawl losses</th>
+        <th>Battleground wins</th>
+        <th>Battleground losses</th>
       </tr>
       <ng-container *ngFor="let thing of gitMapping">
-        <ng-container *ngIf ="thing.StackableId>12000">
-          <ng-container *ngIf="thing.StackableId < 13000">
+        <ng-container *ngIf ="thing.StackableId>11000">
+          <ng-container *ngIf="thing.StackableId < 12000">
             <tr>
               <td> <img class="user-image" src="../../assets/champions/images/{{thing.Icon}}.png"></td>
               <td> <img class="user-image" src="../../assets/champions/images/{{thing.Icon}}.jpg"></td>
 
               <td> {{thing.EnglishLocalizedName}}</td>
-              <td> {{stats[thing.StackableId]}}</td>
               <td> {{stats[thing.StackableId+1000]}}</td>
+              <td> {{stats[thing.StackableId+2000]}}</td>
+              <td> {{stats[thing.StackableId]}}</td>
+              <td> {{stats[thing.StackableId+29000]}}</td>
+              <td> {{stats[thing.StackableId+3000]}}</td>
+              <td> {{stats[thing.StackableId+4000]}}</td>
+              <td> {{stats[thing.StackableId+5000]}}</td>
+              <td> {{stats[thing.StackableId+4000]}}</td>
+
+              <td> {{stats[thing.StackableId+6000]}}</td>
+              <td> {{stats[thing.StackableId+7000]}}</td>
+              <td> {{stats[thing.StackableId+8000]}}</td>
+              <td> {{stats[thing.StackableId+9000]}}</td>
+              <td> {{stats[thing.StackableId+10000]}}</td>
+              <td> {{stats[thing.StackableId+11000]}}</td>
+              <td> {{stats[thing.StackableId+12000]}}</td>
+              <td> {{stats[thing.StackableId+13000]}}</td>
+
+              <td> {{stats[thing.StackableId+14000]}}</td>
+              <td> {{stats[thing.StackableId+15000]}}</td>
+              <td> {{stats[thing.StackableId+16000]}}</td>
+              <td> {{stats[thing.StackableId+17000]}}</td>
+
             </tr>
           </ng-container>
         </ng-container>
