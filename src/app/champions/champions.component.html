@@ -79,14 +79,26 @@
       </mat-card>
 
     </ul>
-    <ng-container *ngFor="let item of gameplay">
+
+    <h3>everything champion</h3><br>
+    <ng-container *ngFor="let item of newgameplay">
       <img src="../../assets/champions/images/{{item.icon}}.jpg">
-      {{english[item.name]}}
-      {{english[item.description]}}
+      {{item.name}}
+      {{item.description}}
       <br>
+
+      <ng-container *ngFor="let ability of ['ability1', 'ability2', 'ability3', 'ability4', 'ability5', 'ability6', 'ability7']">
+        <img src="../../assets/champions/images/{{item[ability].icon}}.jpg" width="25px"><img src="../../assets/champions/images/{{item[ability]['icon128']}}.jpg" width="25px">
+        {{item[ability].name}}
+        {{item[ability].description}}
+        <br>
+      </ng-container>
+      <br>
+
       <ng-container *ngFor="let skills of item.battlerites">
-        {{english[skills.name]}}
-        {{english[skills.description]}}
+        <img src="../../assets/champions/images/{{skills.icon}}.jpg" width="25px">
+        {{skills.name}}
+        {{skills.description}}
         <br>
       </ng-container>
       <br>

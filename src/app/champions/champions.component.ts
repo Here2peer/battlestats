@@ -20,6 +20,7 @@ export class ChampionsComponent implements OnInit {
 
   gameplay: any;
   english: any;
+  newgameplay: any;
 
   constructor(private championsService: ChampionsService) { }
 
@@ -50,6 +51,11 @@ export class ChampionsComponent implements OnInit {
     this.championsService.getGameplay().subscribe((data: any) => {
       console.log(data);
         this.gameplay = data.characters;
+      }
+    );
+    this.championsService.getNewGameplay().subscribe((data: any) => {
+        console.log(data);
+        this.newgameplay = data.characters;
       }
     );
     this.championsService.getEnglishTexts().subscribe((data: any) => {
