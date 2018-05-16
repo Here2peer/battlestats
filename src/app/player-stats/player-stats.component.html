@@ -78,16 +78,9 @@
   </div>
 
   <div class="champions-container">
-    <table>
+    <table >
       <tr>
-        <th>Champion icon</th>
-        <th>Champion</th>
-        <th>Wins</th>
-        <th>Losses</th>
-        <th>XP</th>
-        <th>Level</th>
-        <th>Kills</th>
-        <th>Deaths</th>
+        <th colspan="2">Champion</th>
         <th>Time Played</th>
 
         <th>Ranked 2v2 wins</th>
@@ -108,16 +101,16 @@
         <ng-container *ngIf ="thing.StackableId>11000">
           <ng-container *ngIf="thing.StackableId < 12000">
             <tr>
-              <td> <img class="champion-image" src="../../assets/champions/images/{{thing.Icon}}.jpg"></td>
-              <td> {{thing.EnglishLocalizedName}}</td>
-              <td> {{stats[thing.StackableId+1000]}}</td>
-              <td> {{stats[thing.StackableId+2000]}}</td>
-              <td> {{stats[thing.StackableId]}}</td>
-              <td> {{stats[thing.StackableId+29000]}}</td>
-              <td> {{stats[thing.StackableId+3000]}}</td>
-              <td> {{stats[thing.StackableId+4000]}}</td>
-              <td> {{stats[thing.StackableId+5000]}}</td>
+              <td><img class="champion-image" src="../../assets/champions/images/{{thing.Icon}}.jpg"></td>
+              <td>
+                <table>
+                  <tr><td> {{thing.EnglishLocalizedName}}</td></tr>
+                  <tr><td style="font-size: small" colspan="1">wins {{stats[thing.StackableId+1000]}}, losses {{stats[thing.StackableId+2000]}}</td></tr>
+                  <tr><td style="font-size: small" colspan="1">level {{stats[thing.StackableId+29000]}}, {{stats[thing.StackableId]}} xp</td></tr>
+                </table>
+              </td>
 
+              <td> {{stats[thing.StackableId+5000]}}</td>
               <td> {{stats[thing.StackableId+6000]}}</td>
               <td> {{stats[thing.StackableId+7000]}}</td>
               <td> {{stats[thing.StackableId+8000]}}</td>
