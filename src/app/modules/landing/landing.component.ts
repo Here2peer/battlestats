@@ -7,14 +7,19 @@ import {NewsService} from './news.service';
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent implements OnInit {
-
+  news: any;
+  img: any;
 
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
-    this.newsService.getNews().subscribe((data: any) => {
-      console.log(data);
-    });
+     const data = this.newsService.fetch('GET').then( res => {
+       this.news = res['appnews']['newsitems'];
+       const reg = new RegExp('/(https?:\\/\\/[^\\s]+)/g');
+       this.img = reg.exec(this.news['contents']);
+       console.log(this.img);
+       console.log(this.news);
+     });
   }
 
 }

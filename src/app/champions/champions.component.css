@@ -29,6 +29,12 @@ li {
 
 }
 
+.mat-card-header{
+  display: block;
+  margin-bottom: 1em;
+}
+
+
 .mat-card-subtitle {
   font-size: 12px;
   height: 0px;
