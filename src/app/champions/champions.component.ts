@@ -19,6 +19,7 @@ export class ChampionsComponent implements OnInit {
   lore: boolean;
 
   gameplay: any;
+  english: any;
 
   constructor(private championsService: ChampionsService) { }
 
@@ -49,6 +50,10 @@ export class ChampionsComponent implements OnInit {
     this.championsService.getGameplay().subscribe((data: any) => {
       console.log(data);
         this.gameplay = data.characters;
+      }
+    );
+    this.championsService.getEnglishTexts().subscribe((data: any) => {
+        this.english = data;
       }
     );
   }

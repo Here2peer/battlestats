@@ -13,5 +13,8 @@ export class ChampionsService {
   getGameplay() {
     return this.http.get('./assets/champions/gameplay.json');
   }
+  getEnglishTexts() {
+    return this.http.get('./assets/champions/English.json');
+  }
 
 }
