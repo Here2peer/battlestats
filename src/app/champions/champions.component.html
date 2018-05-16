@@ -3,35 +3,63 @@
     <ul class="champion-cat">
 
       <h2>Melee</h2>
-      <mat-card class="champion" *ngFor="let results of melee">
-        <mat-card-title class="">{{results.name}}</mat-card-title>
-        <img class="portrait" src="{{results.portrait}}">
-        <mat-card-subtitle class="mat-card-description">{{results.desc}}</mat-card-subtitle>
+      <mat-card class="champion" *ngFor="let champion of melee">
+        <mat-card-header>
+        <mat-card-title class="">{{champion.name}}</mat-card-title>
+        <mat-card-subtitle class="mat-card-description">{{champion.desc}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image	src="{{champion.portrait}}">
+        <mat-card-content>
+        <li class="skills" *ngFor="let skills of champion['skills']">
+          <img mat-card-image src="{{skills.icon}}">
+        </li>
+        </mat-card-content>
 
       </mat-card>
+
     </ul>
 
     <ul class="champion-cat">
       <h2>Ranged</h2>
 
-      <li class="mat-card champion" *ngFor="let results of ranged">
-        <img class="portrait" src="{{results.portrait}}">
-        <h3 class="mat-card title"> {{results.name}}</h3>
-        <h5 class="mat-card-description">{{results.desc}}</h5>
+      <mat-card class="champion" *ngFor="let champion of ranged">
 
-      </li>
+        <mat-card-header>
+          <mat-card-title class="">{{champion.name}}</mat-card-title>
+          <mat-card-subtitle class="mat-card-description">{{champion.desc}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image	src="{{champion.portrait}}">
+        <mat-card-content>
+          <li class="skills" *ngFor="let skills of champion['skills']">
+            <img mat-card-image src="{{skills.icon}}">
+          </li>
+        </mat-card-content>
+
+
+
+      </mat-card>
+
      </ul>
 
     <ul  class="champion-cat">
       <h2>Support</h2>
 
-      <li class="mat-card champion" *ngFor="let results of support">
-        <img class="portrait" src="{{results.portrait}}">
-        <h3 class="mat-card title"> {{results.name}} </h3>
-        <h5 class="mat-card-description">{{results.desc}}</h5>
+      <mat-card class="champion" *ngFor="let champion of support">
 
-      </li>
+        <mat-card-header>
+          <mat-card-title class="">{{champion.name}}</mat-card-title>
+          <mat-card-subtitle class="mat-card-description">{{champion.desc}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image	src="{{champion.portrait}}">
+        <mat-card-content>
+          <li class="skills" *ngFor="let skills of champion['skills']">
+            <img mat-card-image src="{{skills.icon}}">
+          </li>
+        </mat-card-content>
+
+      </mat-card>
 
     </ul>
   </div>
 </div>
+

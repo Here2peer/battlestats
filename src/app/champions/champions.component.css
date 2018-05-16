@@ -3,22 +3,48 @@ li {
 }
 
 .champion-cat {
-  text-align: center;
+  text-align: left;
+  min-height: 250px;
 }
 
 .champion{
-  max-width: 200px;
+  display: inline-block;
+  max-width: 180px;
   text-align: center;
-  background: lightgray;
-  color: black;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #d36f15;
+  color: white;
+  margin-right: 1em;
+  padding: 0px;
 }
 
-.portrait{
-  max-width: 100%;
-  display: block;
+.mat-card-image{
+  margin-bottom: 0px;
+  width: 100%;
+
 }
 
 .mat-card-title {
-  margin: 0;
+  font-size: 20px;
+  height: 12px;
+
 }
+
+.mat-card-subtitle {
+  font-size: 12px;
+  height: 0px;
+
+}
+
+.skills{
+  display: inline;
+
+}
+
+.skills img{
+
+  width: 14%;
+  height: 14%;
+  margin: 0;
+
+}
+

@@ -23,6 +23,7 @@ export class ChampionsComponent implements OnInit {
         this.melee = this.catagory['melee'];
         this.ranged = this.catagory['ranged'];
         this.support = this.catagory['support'];
+
       }
     );
   }
