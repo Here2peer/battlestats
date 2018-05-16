@@ -6,11 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tournament.component.css']
 })
 export class TournamentComponent implements OnInit {
-
+  public shouldShow = true;
+  public activeTab = 'myTourneys';
   constructor() { }
-
-
-
   ngOnInit() {
   }
 

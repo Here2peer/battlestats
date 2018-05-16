@@ -11,23 +11,28 @@
 
 
 <!-- Tab links -->
+<button (click)="shouldShow = !shouldShow">Show/Hide</button><br>
+<label [ngClass]="{show: shouldShow, hide: !shouldShow}">SOME TEXT</label>
+
+
 <div class="tab">
-  <button class="tablinks" onclick="openOption(event, 'MyTourneys')">My Tournaments</button>
-  <button class="tablinks" onclick="openOption(event, 'PubTourneys')">Public Tournaments</button>
-  <button class="tablinks" onclick="openOption(event, 'CurrTourney')" disabled>Selected Tournament</button>
+  <button class="tablinks" (click)="activeTab = 'myTourneys'">My Tournaments</button>
+  <button class="tablinks" (click)="activeTab = 'pubTourneys'">Public Tournaments</button>
+  <button class="tablinks" (click)="activeTab = 'currTourney'" disabled>Selected Tournament</button>
 </div>
 
 <!-- Tabs content -->
-<div id="MyTourneys" class="tabcontent">
+<div [ngClass]="{show: activeTab=='myTourneys', hide: activeTab!='myTourneys'}">
+  <h3>My Tournaments</h3>
   <p>Create new tournament here</p>
   <h3>Tournaments</h3>
   <p>List of your tourneys here....</p>
 </div>
-<div id="PubTourneys" class="tabcontent">
+<div [ngClass]="{show: activeTab=='pubTourneys', hide: activeTab!='pubTourneys'}">
   <h3>Public Tournaments</h3>
   <p>List of public tourneys here...</p>
 </div>
-<div id="CurrTourney" class="tabcontent">
+<div [ngClass]="{show: activeTab=='currTourney', hide: activeTab!='currTourney'}">
   <h3>Current Tournament: </h3>
   <p>Tournament information here...</p>
 </div>
