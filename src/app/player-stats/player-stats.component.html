@@ -80,12 +80,23 @@
   <div class="champions-container">
     <table>
       <tr>
+        <th>Champion icon</th>
         <th>Champion</th>
         <th>Champion Wins</th>
         <th>Champion Losses</th>
       </tr>
-      <tr *ngFor="let mapping of gitMapping" ngIf="{{mapping.StackaleId}} > 12000">
-      </tr>
+      <ng-container *ngFor="let thing of gitMapping">
+        <ng-container *ngIf ="thing.StackableId>12000">
+          <ng-container *ngIf="thing.StackableId < 13000">
+            <tr>
+              <td> {{thing.Icon}}</td>
+              <td> {{thing.EnglishLocalizedName}}</td>
+              <td> {{stats[thing.StackableId]}}</td>
+              <td> {{stats[thing.StackableId+1000]}}</td>
+            </tr>
+          </ng-container>
+        </ng-container>
+      </ng-container>
       <tr>
         <td>{{statsMapping[1001].map}}</td>
         <td>{{stats[1001]}}</td>
