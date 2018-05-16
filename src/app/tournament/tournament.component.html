@@ -1,20 +1,11 @@
 <!--
-  Tabs and tab content switching taken from w3schools example;
+  Tabs and tab content switching taken from a combination of these examples (mainly second example);
   https://www.w3schools.com/howto/howto_js_tabs.asp
--->
-
-<!--
-  Javascript to handle the tabs, also taken from the above-mentioned w3schools example.
-
-  ERROR: CANNOT INCLUDE JAVASCRIPT IN THIS FILE, DOES NOT COMPUTE
+  https://stackoverflow.com/questions/44630684/angular-4-click-changes-the-class-of-another-element-without-using-jquery
 -->
 
 
 <!-- Tab links -->
-<button (click)="shouldShow = !shouldShow">Show/Hide</button><br>
-<label [ngClass]="{show: shouldShow, hide: !shouldShow}">SOME TEXT</label>
-
-
 <div class="tab">
   <button class="tablinks" (click)="activeTab = 'myTourneys'">My Tournaments</button>
   <button class="tablinks" (click)="activeTab = 'pubTourneys'">Public Tournaments</button>
@@ -24,18 +15,23 @@
 <!-- Tabs content -->
 <div [ngClass]="{show: activeTab=='myTourneys', hide: activeTab!='myTourneys'}">
   <h3>My Tournaments</h3>
-  <p>Create new tournament here</p>
+  <p>Create new tournament here [link]</p>
   <h3>Tournaments</h3>
-  <p>List of your tourneys here....</p>
+  <div class="mytournamentdiv">
+    <p>Tourney 1</p>
+    <p>Tourney 2</p>
+    <p>Etc...</p>
+  </div>
 </div>
 <div [ngClass]="{show: activeTab=='pubTourneys', hide: activeTab!='pubTourneys'}">
   <h3>Public Tournaments</h3>
-  <p>List of public tourneys here...</p>
+  <div class="publictournamentdiv">
+    <p>Tourney 1</p>
+    <p>Tourney 2</p>
+    <p>Etc...</p>
+  </div>
 </div>
 <div [ngClass]="{show: activeTab=='currTourney', hide: activeTab!='currTourney'}">
   <h3>Current Tournament: </h3>
-  <p>Tournament information here...</p>
+  <p>Tournament information, schedule, matches played here...</p>
 </div>
-
-
-<script src="tabswitcher.js"></script>
