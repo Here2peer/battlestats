@@ -1,0 +1,16 @@
+<div class="landingwrapper">
+  <div class="newswrapper">
+
+    <mat-expansion-panel class="mat-expansion-panel" *ngFor="let results of news">
+      <mat-expansion-panel-header>
+        <mat-panel-title class="mat-panel-title">
+          {{results.title}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <p>{{results.url}}</p>
+
+    </mat-expansion-panel>
+
+  </div>
+</div>

@@ -9,7 +9,7 @@ import { TeamStatsComponent } from './team-stats/team-stats.component';
 import { PlayerStatsComponent } from './player-stats/player-stats.component';
 import { AppRoutingModule } from './modules/routing/app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { LandingComponent } from './modules/landing/landing.component';
+import { LandingComponent } from './landing/landing.component';
 import { ChampionsComponent } from './champions/champions.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {MaterialModule} from './modules/material/material.module';

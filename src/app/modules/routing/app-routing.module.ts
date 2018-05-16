@@ -4,7 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {PlayerStatsComponent} from '../../player-stats/player-stats.component';
 import {TeamStatsComponent} from '../../team-stats/team-stats.component';
 import {PageNotFoundComponent} from '../../page-not-found/page-not-found.component';
-import {LandingComponent} from '../landing/landing.component';
+import {LandingComponent} from '../../landing/landing.component';
 import {ChampionsComponent} from '../../champions/champions.component';
 import {TournamentComponent} from '../../tournament/tournament.component';
 

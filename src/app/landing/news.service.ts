@@ -8,8 +8,8 @@ import 'isomorphic-fetch';
 export class NewsService {
   key = '47E81668C8A02D8BC4341E13C666BE0B\n';
   appid = '504370'; // steam game id, in this case battlerite.
-  count = 5; // how many news entry to be returned.
-  maxlength = 3000; // max length of each news entry.
+  count = 10; // how many news entry to be returned.
+  maxlength = 100; // max length of each news entry.
   format = 'json'; // can be json, xml or vdf.
   link = 'http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=' +
     this.appid + '&count=' + this.count + '&maxlength=' + this.maxlength + '&format=' + this.format; // actual link to the api end-point.
