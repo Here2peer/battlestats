@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component} from '@angular/core';
 import {PlayerStatsService} from './player-stats.service';
 import {PlayerService} from './player.service';
 
@@ -8,6 +8,7 @@ import {PlayerService} from './player.service';
   styleUrls: ['./player-stats.component.css'],
   providers: [PlayerStatsService, PlayerService]
 })
+
 export class PlayerStatsComponent implements AfterViewInit {
   playerData: any;
   attribute: any;
@@ -16,6 +17,7 @@ export class PlayerStatsComponent implements AfterViewInit {
   links: any;
   meta: any;
   statsMapping: any;
+  gitMapping: any;
 
   constructor(private playerStatsService: PlayerStatsService, private playerService: PlayerService) { }
 
@@ -30,11 +32,15 @@ export class PlayerStatsComponent implements AfterViewInit {
         this.meta = data['meta'];
       }
     );
-    this.playerStatsService.getPlayerStats().subscribe((data: any) => {
+    this.playerStatsService.getStatsMapping().subscribe((data: any) => {
         console.log(data);
         this.statsMapping = data;
-
+      }
+    );
+    this.playerStatsService.getGitMapping().subscribe((data: any) => {
+        this.gitMapping = data.Mappings;
       }
     );
   }
 }
+

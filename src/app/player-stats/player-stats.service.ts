@@ -7,8 +7,12 @@ import {HttpClient} from '@angular/common/http';
 export class PlayerStatsService {
   constructor(private http: HttpClient) {}
 
-  getPlayerStats() {
+  getStatsMapping() {
     return this.http.get('./assets/players/statsMapping.json');
+  }
+
+  getGitMapping() {
+    return this.http.get('./assets/players/gitMappings.json');
   }
 
 }

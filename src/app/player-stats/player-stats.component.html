@@ -1,4 +1,4 @@
-<div class="user-container" *ngIf="stats">
+<div class="user-container" *ngIf="gitMapping">
   <mat-grid-list cols="11" rowHeight="75" >
 
     <mat-grid-tile [colspan]="2">{{attribute.name}} {{attribute.stats[8]}}</mat-grid-tile>
@@ -77,12 +77,14 @@
     </div>
   </div>
 
-  <div class="maps-container">
+  <div class="champions-container">
     <table>
       <tr>
-        <th>Map</th>
-        <th>Map Wins</th>
-        <th>Map Losses</th>
+        <th>Champion</th>
+        <th>Champion Wins</th>
+        <th>Champion Losses</th>
+      </tr>
+      <tr *ngFor="let mapping of gitMapping" ngIf="{{mapping.StackaleId}} > 12000">
       </tr>
       <tr>
         <td>{{statsMapping[1001].map}}</td>
@@ -97,4 +99,3 @@
     </table>
   </div>
 </div>
-
