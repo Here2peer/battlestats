@@ -1,6 +1,5 @@
 .user-container {
   padding: 10px 10px;
-  border-style: dashed;
 }
 
 .user-image {
@@ -15,4 +14,34 @@
 
 li{
   list-style: none;
+}
+
+#ranking-container{
+  text-align: justify;
+
+}
+#ranking-container > div.ranking-alignment-box {
+  width: 16%; /* Declare your value. Can be in relative units. */
+  display: inline-block;
+  vertical-align: top;
+  alignment: center;
+  /* IE fix. */
+  *display: inline;
+  zoom: 1;
+}
+#ranking-container:after {
+  content: "";
+  width: 100%;
+  display: inline-block;
+}
+.ranking-box{
+  width: 150px;
+  padding: 5px 15px;
+  background: darkslategray;
+  text-align: left;
+  margin:0 auto;
+}
+
+.ranking-title{
+
 }
