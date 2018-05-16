@@ -18,6 +18,8 @@ export class ChampionsComponent implements OnInit {
   champions: any;
   lore: boolean;
 
+  gameplay: any;
+
   constructor(private championsService: ChampionsService) { }
 
   activateClass(champion) {
@@ -42,6 +44,10 @@ export class ChampionsComponent implements OnInit {
         this.ranged = this.champions['ranged'];
         this.support = this.champions['support'];
         console.log(this.melee);
+      }
+    );
+    this.championsService.getGameplay().subscribe((data: any) => {
+        this.gameplay = data.characters;
       }
     );
   }
