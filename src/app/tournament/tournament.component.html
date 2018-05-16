@@ -1,3 +1,26 @@
-<p>
-  tournament works!
-</p>
+<!--
+  Tabs and tab content switching taken from w3schools example;
+  https://www.w3schools.com/howto/howto_js_tabs.asp
+-->
+
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openOption(event, 'MyTourneys')">My Tournaments</button>
+  <button class="tablinks" onclick="openOption(event, 'PubTourneys')">Public Tournaments</button>
+  <button class="tablinks" onclick="openOption(event, 'CurrTourney')" disabled>Selected Tournament</button>
+</div>
+
+<!-- Tabs content -->
+<div id="MyTourneys" class="tabcontent">
+  <p>Create new tournament here</p>
+  <h3>Tournaments</h3>
+  <p>List of your tourneys here....</p>
+</div>
+<div id="PubTourneys" class="tabcontent">
+  <h3>Public Tournaments</h3>
+  <p>List of public tourneys here...</p>
+</div>
+<div id="CurrTourney" class="tabcontent">
+  <h3>Current Tournament: </h3>
+  <p>Tournament information here...</p>
+</div>
