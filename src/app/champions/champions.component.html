@@ -79,19 +79,6 @@
       </mat-card>
 
     </ul>
-    <script language="JavaScript">
-      hoi()
-      function hoi() {
-        let name = prompt("What is your name?");
-        console.log("hoi")
-        const loadIniFile = require('read-ini-file')
-        const path = require('path')
-
-        const fixture = path.join(__dirname, 'English.ini')
-        const currencies = loadIniFile.sync(fixture)
-        console.log(currencies['238e2d079751457785266d20c7a6c27c'])
-      }
-    </script>
     <ng-container *ngFor="let item of gameplay">
       {{item.name}}
       {{item.description}}
