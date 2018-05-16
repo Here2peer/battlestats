@@ -2,7 +2,7 @@
   <mat-grid-list cols="11" rowHeight="75" >
 
     <mat-grid-tile [colspan]="2">{{attribute.name}}</mat-grid-tile>
-    <mat-grid-tile [colspan]="1">Time played (in seconds)</mat-grid-tile>
+    <mat-grid-tile [colspan]="1">Time played</mat-grid-tile>
     <mat-grid-tile [colspan]="1">Wins</mat-grid-tile>
     <mat-grid-tile [colspan]="1">Losses</mat-grid-tile>
     <mat-grid-tile [colspan]="1">Win rate</mat-grid-tile>
@@ -13,7 +13,7 @@
     <mat-grid-tile [colspan]="1">Rating deviant</mat-grid-tile>
 
     <mat-grid-tile [colspan]="2"><img class="user-image" src="../../assets/players/profileImages/index.png"></mat-grid-tile>
-    <mat-grid-tile [colspan]="1">{{stats[8]}}</mat-grid-tile><!-- time played -->
+    <mat-grid-tile [colspan]="1">{{customstats.timePlayed}}</mat-grid-tile><!-- time played -->
     <mat-grid-tile [colspan]="1">{{stats[2]}}</mat-grid-tile><!-- wins -->
     <mat-grid-tile [colspan]="1">{{stats[3]}}</mat-grid-tile><!-- losses -->
     <mat-grid-tile [colspan]="1">{{customstats['winRate']}}</mat-grid-tile><!-- win rate -->
@@ -109,7 +109,6 @@
           <ng-container *ngIf="thing.StackableId < 12000">
             <tr>
               <td> <img class="champion-image" src="../../assets/champions/images/{{thing.Icon}}.jpg"></td>
-
               <td> {{thing.EnglishLocalizedName}}</td>
               <td> {{stats[thing.StackableId+1000]}}</td>
               <td> {{stats[thing.StackableId+2000]}}</td>
@@ -118,7 +117,6 @@
               <td> {{stats[thing.StackableId+3000]}}</td>
               <td> {{stats[thing.StackableId+4000]}}</td>
               <td> {{stats[thing.StackableId+5000]}}</td>
-              <td> {{stats[thing.StackableId+4000]}}</td>
 
               <td> {{stats[thing.StackableId+6000]}}</td>
               <td> {{stats[thing.StackableId+7000]}}</td>

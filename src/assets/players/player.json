@@ -299,7 +299,8 @@
         "title": 512
       },
       "customstats": {
-        "winRate": "3%notarealvalue"
+        "winRate": "3%notarealvalue",
+        "timePlayed": "time:played"
       },
       "titleId": "stunlock-studios-battlerite"
     },
