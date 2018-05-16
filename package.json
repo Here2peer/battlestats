@@ -29,6 +29,7 @@
     "express": "^4.16.3",
     "hbs": "^4.0.1",
     "isomorphic-fetch": "^2.2.1",
+    "read-ini-file": "^1.0.0",
     "request": "^2.85.0",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
