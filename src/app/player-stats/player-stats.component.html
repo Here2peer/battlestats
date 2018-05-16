@@ -80,7 +80,7 @@
   <div class="champions-container">
     <table>
       <tr>
-        <th>Champion icon</th>
+        <th colspan="2">Champion icon</th>
         <th>Champion</th>
         <th>Champion Wins</th>
         <th>Champion Losses</th>
@@ -90,6 +90,8 @@
           <ng-container *ngIf="thing.StackableId < 13000">
             <tr>
               <td> <img class="user-image" src="../../assets/champions/images/{{thing.Icon}}.png"></td>
+              <td> <img class="user-image" src="../../assets/champions/images/{{thing.Icon}}.jpg"></td>
+
               <td> {{thing.EnglishLocalizedName}}</td>
               <td> {{stats[thing.StackableId]}}</td>
               <td> {{stats[thing.StackableId+1000]}}</td>
