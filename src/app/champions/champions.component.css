@@ -81,6 +81,11 @@ li {
   z-index: 2;
 }
 
+.mat-card-lg-image {
+  width: auto;
+  height: auto;
+}
+
 .champion.active.skills{
   display: block;
 }
@@ -134,3 +139,14 @@ li {
   margin-left: 1em;
 }
 
+@media only screen and (max-width: 1000px) {
+  .mat-card {
+    min-width: 5em;
+    display: block;
+    height: 100%;
+  }
+
+  .mat-card-lg-image {
+    width: 35%;
+  }
+}
