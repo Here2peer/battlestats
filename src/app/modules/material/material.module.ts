@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 
 import {
-  MatCardModule, MatGridListModule, MatExpansionModule, MatIconModule, MatMenuModule
+  MatCardModule, MatGridListModule, MatExpansionModule, MatIconModule, MatMenuModule, MatButtonModule, MatButtonToggleModule, MatTabsModule
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -12,6 +12,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatIconModule,
     MatMenuModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatTabsModule,
     MatGridListModule
   ],
   exports: [
@@ -20,6 +23,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatIconModule,
     MatMenuModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatTabsModule,
     MatGridListModule
   ]
 })

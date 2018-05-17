@@ -28,14 +28,10 @@ export class ChampionsComponent implements OnInit {
     champion.active = !champion.active;
   }
 
-  activateLore(champion) {
-    champion.lore = isBoolean();
-    champion.lore = !champion.lore;
+  changeStateActivate(element) {
+    element.active = !element.active;
   }
 
-  activateSkills(skills) {
-    skills.active = !skills.active;
-  }
 
   ngOnInit() {
     this.championsService.getChampions().subscribe((data: any) => {

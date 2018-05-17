@@ -11,11 +11,13 @@
   <img class="logo header__logo" src="../../assets/navigation/logo-small.png">
 
   <nav class="menu">
-    <a routerLink="" routerLinkActive="active">Home</a>
-    <a routerLink="/player" routerLinkActive="active">Player Stats</a>
-    <a routerLink="/team" routerLinkActive="active">Team Stats</a>
-    <a routerLink="/champions" routerLinkActive="active">Champion list</a>
-    <a routerLink="/tournament" routerLinkActive="active">Tournament</a>
+    <mat-button-toggle-group>
+      <mat-button-toggle routerLink="" routerLinkActive="active">Home</mat-button-toggle>
+      <mat-button-toggle routerLink="/player" routerLinkActive="active">Player Stats</mat-button-toggle>
+      <mat-button-toggle routerLink="/team" routerLinkActive="active">Team Stats</mat-button-toggle>
+      <mat-button-toggle routerLink="/champions" routerLinkActive="active">Champion list</mat-button-toggle>
+      <mat-button-toggle routerLink="/tournament" routerLinkActive="active">Tournament</mat-button-toggle>
+    </mat-button-toggle-group>
   </nav>
 
   <app-steam></app-steam>
