@@ -1,9 +1,45 @@
+@media only screen and (max-width: 1145px) {
+
+
+  #ranking-container{
+    display: none;
+  }
+
+  .mobile-hide{
+    display:none !important;
+  }
+}
+
+.player-overall-stats{
+  background: rgb(0,0,0,0.5);
+}
+.top-row th{
+  height: 40px;
+  width: 100px;
+
+}
+
+.bottom-row td{
+  height: 40px;
+  width: 100px;
+
+}
+.filler{
+  width: 99.9% !important;
+}
+
 .user-container {
   padding: 10px 10px;
+  display: inline-block;
+  text-align: center;
+}
+.user{
 }
 
 .user-image {
-  height: 100px;
+  height: 70px;
+  float: left;
+  margin-left: 10px;
 }
 
 .player{
@@ -17,7 +53,9 @@ li{
 }
 
 #ranking-container{
+  margin-top: 1em;
   text-align: justify;
+  height: 76px;
 
 }
 #ranking-container > div.ranking-alignment-box {
@@ -37,9 +75,8 @@ li{
 .ranking-box{
   width: 150px;
   padding: 5px 15px;
-  background: darkslategray;
+  background: rgb(230,90,37,0.5);
   text-align: left;
-  margin:0 auto;
 }
 
 .ranking-title{
@@ -47,15 +84,26 @@ li{
 }
 
 .champion-image {
-  height: 60px;
+  height: 40px;
 }
 
 .mat-grid-tile {
-  background: lightgray;
-  color: #031737;
+  background: rgb(0,0,0,0.5);
+  color: white;
+
 }
 
 .tileTitle{
   background: none;
   color: lightgray;
 }
+.champions-container{
+  background: rgb(0,0,0,0.5);
+  margin-top: 1em;
+  text-align: center;
+}
+
+.champion-name {
+  text-align: left;
+}
+

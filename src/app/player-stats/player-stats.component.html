@@ -1,30 +1,32 @@
 <div class="user-container" *ngIf="gitMapping">
-  <mat-grid-list cols="11" rowHeight="75" >
+  <table class="player-overall-stats">
+    <tr class="top-row">
+      <th class="user" rowspan="2"><img class="user-image" src="../../assets/players/profileImages/index.png"></th>
+      <th class="username" rowspan="2">{{attribute.name}}</th>
+      <th class="filler" rowspan="2"></th>
+      <td>Time played</td>
+      <td class="mobile-hide" >Wins</td>
+      <td class="mobile-hide" >Losses</td>
+      <td>Win rate</td>
+      <td class="mobile-hide" >XP</td>
+      <td>Account Level</td>
+      <td class="mobile-hide" >AI plays</td>
+      <td class="mobile-hide" >Rating mean</td>
+      <td class="mobile-hide" >Rating deviant</td>
+    </tr>
+    <tr class="bottom-row">
 
-    <mat-grid-tile [colspan]="2">{{attribute.name}}</mat-grid-tile>
-    <mat-grid-tile [colspan]="1">Time played</mat-grid-tile>
-    <mat-grid-tile [colspan]="1">Wins</mat-grid-tile>
-    <mat-grid-tile [colspan]="1">Losses</mat-grid-tile>
-    <mat-grid-tile [colspan]="1">Win rate</mat-grid-tile>
-    <mat-grid-tile [colspan]="1">XP</mat-grid-tile>
-    <mat-grid-tile [colspan]="1">Account Level</mat-grid-tile>
-    <mat-grid-tile [colspan]="1">AI plays</mat-grid-tile>
-    <mat-grid-tile [colspan]="1">Rating mean</mat-grid-tile>
-    <mat-grid-tile [colspan]="1">Rating deviant</mat-grid-tile>
-
-    <mat-grid-tile [colspan]="2"><img class="user-image" src="../../assets/players/profileImages/index.png"></mat-grid-tile>
-    <mat-grid-tile [colspan]="1">{{customstats.timePlayed}}</mat-grid-tile><!-- time played -->
-    <mat-grid-tile [colspan]="1">{{stats[2]}}</mat-grid-tile><!-- wins -->
-    <mat-grid-tile [colspan]="1">{{stats[3]}}</mat-grid-tile><!-- losses -->
-    <mat-grid-tile [colspan]="1">{{customstats['winRate']}}</mat-grid-tile><!-- win rate -->
-    <mat-grid-tile [colspan]="1">{{stats[25]}}</mat-grid-tile><!-- XP -->
-    <mat-grid-tile [colspan]="1">{{stats[26]}}</mat-grid-tile><!-- Account Level -->
-    <mat-grid-tile [colspan]="1">{{stats[56]}}</mat-grid-tile><!-- AI plays-->
-    <mat-grid-tile [colspan]="1">{{stats[70]}}</mat-grid-tile><!-- Rating mean -->
-    <mat-grid-tile [colspan]="1">{{stats[71]}}</mat-grid-tile><!-- Rating deviant -->
-
-    <mat-grid-tile [colspan]="11"></mat-grid-tile>
-  </mat-grid-list>
+      <td>{{customstats.timePlayed}}</td><!-- time played -->
+      <td class="mobile-hide">{{stats[2]}}</td><!-- wins -->
+      <td class="mobile-hide" >{{stats[3]}}</td><!-- losses -->
+      <td>{{customstats['winRate']}}</td><!-- win rate -->
+      <td class="mobile-hide" >{{stats[25]}}</td><!-- XP -->
+      <td>{{stats[26]}}</td><!-- Account Level -->
+      <td class="mobile-hide" >{{stats[56]}}</td><!-- AI plays-->
+      <td class="mobile-hide">{{stats[70]}}</td><!-- Rating mean -->
+      <td class="mobile-hide" >{{stats[71]}}</td><!-- Rating deviant -->
+    </tr>
+  </table>
 
   <div id="ranking-container">
 
@@ -81,28 +83,28 @@
     <table>
       <tr>
         <th colspan="2">Champion</th>
-        <th>Time Played</th>
+        <th >Time Played</th>
 
-        <th>Ranked 2v2 wins</th>
-        <th>Ranked 2v2 losses</th>
-        <th>Ranked 3v3 wins</th>
-        <th>Ranked 3v3 losses</th>
-        <th>Unranked 2v2 wins</th>
-        <th>Unranked 2v2 losses</th>
-        <th>Unranked 3v3 wins</th>
-        <th>Unranked 3v3 losses</th>
+        <th class="mobile-hide">Ranked 2v2 wins</th>
+        <th class="mobile-hide">Ranked 2v2 losses</th>
+        <th class="mobile-hide">Ranked 3v3 wins</th>
+        <th class="mobile-hide">Ranked 3v3 losses</th>
+        <th class="mobile-hide">Unranked 2v2 wins</th>
+        <th class="mobile-hide">Unranked 2v2 losses</th>
+        <th class="mobile-hide">Unranked 3v3 wins</th>
+        <th class="mobile-hide">Unranked 3v3 losses</th>
 
-        <th>Brawl wins</th>
-        <th>Brawl losses</th>
-        <th>Battleground wins</th>
-        <th>Battleground losses</th>
+        <th class="mobile-hide">Brawl wins</th>
+        <th class="mobile-hide">Brawl losses</th>
+        <th class="mobile-hide">Battleground wins</th>
+        <th class="mobile-hide">Battleground losses</th>
       </tr>
       <ng-container *ngFor="let thing of gitMapping">
         <ng-container *ngIf ="thing.StackableId>11000">
           <ng-container *ngIf="thing.StackableId < 12000">
             <tr>
               <td><img class="champion-image" src="../../assets/champions/images/{{thing.Icon}}.jpg"></td>
-              <td>
+              <td class="champion-name">
                 {{thing.EnglishLocalizedName}}<br>
                 <div style="font-size: small;">
                   wins {{stats[thing.StackableId+1000]}}, losses {{stats[thing.StackableId+2000]}}<br>
@@ -111,19 +113,19 @@
               </td>
 
               <td> {{stats[thing.StackableId+5000]}}</td>
-              <td> {{stats[thing.StackableId+6000]}}</td>
-              <td> {{stats[thing.StackableId+7000]}}</td>
-              <td> {{stats[thing.StackableId+8000]}}</td>
-              <td> {{stats[thing.StackableId+9000]}}</td>
-              <td> {{stats[thing.StackableId+10000]}}</td>
-              <td> {{stats[thing.StackableId+11000]}}</td>
-              <td> {{stats[thing.StackableId+12000]}}</td>
-              <td> {{stats[thing.StackableId+13000]}}</td>
+              <td class="mobile-hide"> {{stats[thing.StackableId+6000]}}</td>
+              <td class="mobile-hide"> {{stats[thing.StackableId+7000]}}</td>
+              <td class="mobile-hide"> {{stats[thing.StackableId+8000]}}</td>
+              <td class="mobile-hide"> {{stats[thing.StackableId+9000]}}</td>
+              <td class="mobile-hide"> {{stats[thing.StackableId+10000]}}</td>
+              <td class="mobile-hide"> {{stats[thing.StackableId+11000]}}</td>
+              <td class="mobile-hide"> {{stats[thing.StackableId+12000]}}</td>
+              <td class="mobile-hide"> {{stats[thing.StackableId+13000]}}</td>
 
-              <td> {{stats[thing.StackableId+14000]}}</td>
-              <td> {{stats[thing.StackableId+15000]}}</td>
-              <td> {{stats[thing.StackableId+16000]}}</td>
-              <td> {{stats[thing.StackableId+17000]}}</td>
+              <td class="mobile-hide"> {{stats[thing.StackableId+14000]}}</td>
+              <td class="mobile-hide"> {{stats[thing.StackableId+15000]}}</td>
+              <td class="mobile-hide"> {{stats[thing.StackableId+16000]}}</td>
+              <td class="mobile-hide"> {{stats[thing.StackableId+17000]}}</td>
             </tr>
           </ng-container>
         </ng-container>
