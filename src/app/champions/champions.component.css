@@ -1,0 +1,86 @@
+li {
+  list-style: none;
+}
+
+.champion-cat {
+  text-align: left;
+  min-height: 250px;
+  position: relative;
+}
+
+.champion{
+  display: inline-block;
+  max-width: 10em;
+  text-align: center;
+  background: #d36f15;
+  color: white;
+  margin-right: 1em;
+  padding: 0px;
+}
+
+.mat-card-image{
+  margin-bottom: 0px;
+  width: 100%;
+
+}
+
+.mat-card-title {
+  font-size: 20px;
+  height: 12px;
+
+}
+
+.mat-card-header{
+  display: block;
+  margin-bottom: 1em;
+}
+
+
+.mat-card-subtitle {
+  font-size: 12px;
+  height: 0px;
+
+}
+
+.skills{
+  display: none;
+}
+
+.lore{
+  display: none;
+}
+
+.skills img{
+  width: 25%;
+  height: 25%;
+  margin: 0;
+}
+
+.champion button{
+  display: none;
+}
+
+.champion.active{
+  width: 100%;
+  height: 100%;
+  max-width: 30em;
+}
+
+.champion.active.skills{
+  display: block;
+}
+
+.champion.active button{
+  display: inline;
+  float: left;
+}
+
+.skills.active{
+  float: left;
+  margin: 0;
+}
+
+.lore.active{
+  display: block;
+}
+

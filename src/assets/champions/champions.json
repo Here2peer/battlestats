@@ -1,0 +1,55 @@
+{
+  "champions": {
+    "melee":[
+      {"id": 3, "name": "Bakko", "portrait": "../../assets/champions/portraits/bakko-portrait.png", "desc": "HERO OF BOULDER PASS","lore": "Bakko has a proud history, filled with bravery and courage. Most known for saving hundreds of people from getting slaughtered by the giants in the north. A heroic brawler armed with axe and shield. Bakko uses his shield to outmaneuver opponents and protect his teammates. Watch out for his earth shattering dash attacks, even calm warriors sometimes go berserk.",
+        "skills": [
+          {"name": "War Axe", "desc": "Swing your axe to deal damage. Each charge increases the power of Blood Axe.", "icon": "../../assets/champions/skills/waraxe.png"},
+          {"name": "Blood Axe", "desc": "Throw an axe that deals damage. Deals bonus damage for each weapon charge.", "icon": "../../assets/champions/skills/bloodaxe.png"},
+          {"name": "Valiant Leap", "desc": "Leap into the air and strike down upon your enemies dealing damage and inflicting Snare.", "icon": "../../assets/champions/skills/valiantleap.png"},
+          {"name": "Bulwark", "desc": "Put up your shield and block incoming attacks. Reflects enemy projectiles and inflicts Stun on enemy melee attackers.", "icon": "../../assets/champions/skills/bulwark.png"},
+          {"name": "Shield Dash", "desc": "Dash forward and push an enemy in front of you. Pushing an enemy into a wall deals damage.", "icon": "../../assets/champions/skills/shielddash.png"},
+          {"name": "War Shout", "desc": "Let loose a War Shout that shields all nearby allies absorbing damage.", "icon": "../../assets/champions/skills/warshout.png"},
+          {"name": "Heroic Charge", "desc": "Rush forward and grab an enemy dealing damage and pushing it in front of you. Deals area damage and inflicts Stun when reaching max distance or when colliding with a wall or another enemy.", "icon": "../../assets/champions/skills/heroiccharge.png"}
+        ]
+      }
+    ],
+    "ranged": [
+      {"id": 1, "name": "Alysia", "portrait": "../../assets/champions/portraits/alysia-portrait.png", "desc": "THE ICE WEAVER","lore": "From the frozen north comes the ice sculptor Alysia. Her power allows her to wield ice with both grace and deadly precision. She can damage and freeze her enemies from a distance, while shielding her allies with ice. Obsessed with shapes and form, she left her icy fortress of solitude to seek inspiration in the arena.",
+        "skills": [
+          {"name": "Frost Bolt", "desc": "Launch a cold bolt that deals damage. Deals bonus damage and adds Chill duration to enemies affected by Chill.", "icon": "../../assets/champions/skills/frostbolt.png"},
+          {"name": "Ice Lance", "desc": "Projectile attack that deals damage and inflicts Chill. Deals bonus damage to enemies already affected by Chill.", "icon": "../../assets/champions/skills/icelance.png"},
+          {"name": "Arctic Wind", "desc": "Soar gracefully to target location.", "icon": "../../assets/champions/skills/arcticwind.png"},
+          {"name": "Glacial Prism", "desc": "Shield a target ally. Glacial Prism absorbs damage for the duration. When it breaks, it explodes to inflict Chill on nearby enemies.", "icon": "../../assets/champions/skills/glacialprism.png"},
+          {"name": "Flash Freeze", "desc": "Call down a frozen star at target location. After a delay, it deals damage and inflicts Chill to enemies in the area. Inflicts Freeze to enemies already affected by Chill.", "icon": "../../assets/champions/skills/flashfreeze.png"},
+          {"name": "Ice Crown", "desc": "Launch a fragile sculpture that knocks enemies back and blocks enemy attacks. When it breaks, it launches a cone of icicles that deals damage and inflicts Chill.", "icon": "../../assets/champions/skills/icecrown.png"},
+          {"name": "Frozen Gallery", "desc": "Mark a path of frost in front of you. After a delay, the patch deals damage and inflicts Freeze to enemies hit, turning them into beautiful statues.", "icon": "../../assets/champions/skills/frozengallery.png"}
+        ]
+      }
+      ,
+      {"id": 2, "name": "Ashka", "portrait": "../../assets/champions/portraits/ashka-portrait.png", "desc": "THE MOLTEN FURY","lore": "A masked creature specialized in dark sorcery and pyro-kinetic powers. Casting devastating fire spells on his opponents, staying away from close combat. Don’t be fooled by his size, Ashka’s inner demon strikes fear into all who face him.",
+        "skills": [
+          {"name": "Fire Ball", "desc": "Launch a Fireball that deals damage. Reapplies Ignite on impact.", "icon": "../../assets/champions/skills/fireball.png"},
+          {"name": "Fire Storm", "desc": "Launch 3 Fire Storm projectiles. Each projectile deals damage and Ignites the enemy dealing damage over time.", "icon": "../../assets/champions/skills/firestorm.png"},
+          {"name": "Searing Flight", "desc": "Transform into fire and fly to target location dealing damage to nearby enemies.", "icon": "../../assets/champions/skills/searingflight.png"},
+          {"name": "Flamestrike", "desc": "Engulf an area in flames dealing area damage and stunning enemies.", "icon": "../../assets/champions/skills/flamestrike.png"},
+          {"name": "Molten Fist", "desc": "Turn into a fist of magma and dash forward. Inflicts Snare and knocks the enemy back.", "icon": "../../assets/champions/skills/moltenfist.png"},
+          {"name": "Fire Wall", "desc": "Summon a firewall at target location. The wall blocks projectiles and Ignites enemies that pass through it.", "icon": "../../assets/champions/skills/firewall.png"},
+          {"name": "Infernal Scorch", "desc": "Transform into a fire elemental and dash forward dealing damage and Igniting enemies. Scorches the ground below you dealing damage while standing in it.", "icon": "../../assets/champions/skills/infernalscorch.png"}
+        ]
+      }
+      ],
+    "support": [
+      {"id": 4, "name": "Blossom", "portrait": "../../assets/champions/portraits/blossom-portrait.png", "desc": "THE FOREST MENDER","lore": "Blossom is a happy, bubbly young faun from the Silverdeep Forest. She has left her home to investigate a disturbance in the natural order. She is always accompanied by her bird companion, Maxwell.",
+        "skills": [
+          {"name": "Twack!", "desc": "Throw an infused acorn that deals damage. Deals extra damage and inflicts Snare if weapon is fully charged.", "icon": "../../assets/champions/skills/thwack!.png"},
+          {"name": "Nourish", "desc": "Summon the vitalizing powers of nature to heal nearest ally. Applies Butterflies, healing ally over time.", "icon": "../../assets/champions/skills/nourish.png"},
+          {"name": "Hop", "desc": "Hop towards target location and avoid incoming attacks. Grants invisibility, increased movement speed and removes movement impairing effects upon landing. Invisibility fades when an ability is used.", "icon": "../../assets/champions/skills/hop.png"},
+          {"name": "Tree of Life", "desc": "Summon an immovable Tree of Life sapling that heals nearby allies and additional healing over time.", "icon": "../../assets/champions/skills/treeoflife.png"},
+          {"name": "Boom Bloom", "desc": "Launch a Boom Bloom seed that deals damage. The seed will take root and bloom after a short delay to inflict Stun on all nearby enemies.", "icon": "../../assets/champions/skills/boombloom.png"},
+          {"name": "Gust", "desc": "Summon a barrier of wind that pushes enemies away, and reflects projectiles.", "icon": "../../assets/champions/skills/gust.png"},
+          {"name": "Dance of the Dryads", "desc": "Launch into the air and unleash 3 waves of energy upon landing. Each wave deals damage and inflicts Weaken to enemies struck.", "icon": "../../assets/champions/skills/danceofthedryads.png"}
+        ]
+      }
+      ]
+  }
+}

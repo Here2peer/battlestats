@@ -1,0 +1,62 @@
+.user-container {
+  padding: 10px 10px;
+}
+
+.user-image {
+  height: 100px;
+}
+
+.player{
+  max-width: 750px;
+  text-align: center;
+  color: black;
+}
+
+li{
+  list-style: none;
+}
+
+#ranking-container{
+  text-align: justify;
+
+}
+#ranking-container > div.ranking-alignment-box {
+  width: 16%; /* Declare your value. Can be in relative units. */
+  display: inline-block;
+  vertical-align: top;
+  alignment: center;
+  /* IE fix. */
+  *display: inline;
+  zoom: 1;
+}
+#ranking-container:after {
+  content: "";
+  width: 100%;
+  display: inline-block;
+}
+.ranking-box{
+  width: 150px;
+  padding: 5px 15px;
+  background: darkslategray;
+  text-align: left;
+  margin:0 auto;
+}
+
+.ranking-title{
+
+}
+
+.champion-image {
+  height: 60px;
+=======
+}
+
+.mat-grid-tile {
+  background: lightgray;
+  color: #031737;
+}
+
+.tileTitle{
+  background: none;
+  color: lightgray;
+}

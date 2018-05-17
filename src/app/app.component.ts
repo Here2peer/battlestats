@@ -9,9 +9,6 @@ import {NavigationService} from './navigation/navigation.service';
 })
 
 
-
-
-
 export class AppComponent {
   title = 'app';
 

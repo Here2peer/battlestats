@@ -1,0 +1,37 @@
+<!--
+  Tabs and tab content switching taken from a combination of these examples (mainly second example);
+  https://www.w3schools.com/howto/howto_js_tabs.asp
+  https://stackoverflow.com/questions/44630684/angular-4-click-changes-the-class-of-another-element-without-using-jquery
+-->
+
+
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" (click)="activeTab = 'myTourneys'">My Tournaments</button>
+  <button class="tablinks" (click)="activeTab = 'pubTourneys'">Public Tournaments</button>
+  <button class="tablinks" (click)="activeTab = 'currTourney'" disabled>Selected Tournament</button>
+</div>
+
+<!-- Tabs content -->
+<div [ngClass]="{show: activeTab=='myTourneys', hide: activeTab!='myTourneys'}">
+  <h3>My Tournaments</h3>
+  <p>Create new tournament here [link]</p>
+  <h3>Tournaments</h3>
+  <div class="mytournamentdiv">
+    <p>Tourney 1</p>
+    <p>Tourney 2</p>
+    <p>Etc...</p>
+  </div>
+</div>
+<div [ngClass]="{show: activeTab=='pubTourneys', hide: activeTab!='pubTourneys'}">
+  <h3>Public Tournaments</h3>
+  <div class="publictournamentdiv">
+    <p>Tourney 1</p>
+    <p>Tourney 2</p>
+    <p>Etc...</p>
+  </div>
+</div>
+<div [ngClass]="{show: activeTab=='currTourney', hide: activeTab!='currTourney'}">
+  <h3>Current Tournament: </h3>
+  <p>Tournament information, schedule, matches played here...</p>
+</div>

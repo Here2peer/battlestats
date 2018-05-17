@@ -1,3 +1,133 @@
-<p>
-  SHOULD CONTAIN PLAYER STATS
-</p>
+<div class="user-container" *ngIf="gitMapping">
+  <mat-grid-list cols="11" rowHeight="75" >
+
+    <mat-grid-tile [colspan]="2">{{attribute.name}}</mat-grid-tile>
+    <mat-grid-tile [colspan]="1">Time played</mat-grid-tile>
+    <mat-grid-tile [colspan]="1">Wins</mat-grid-tile>
+    <mat-grid-tile [colspan]="1">Losses</mat-grid-tile>
+    <mat-grid-tile [colspan]="1">Win rate</mat-grid-tile>
+    <mat-grid-tile [colspan]="1">XP</mat-grid-tile>
+    <mat-grid-tile [colspan]="1">Account Level</mat-grid-tile>
+    <mat-grid-tile [colspan]="1">AI plays</mat-grid-tile>
+    <mat-grid-tile [colspan]="1">Rating mean</mat-grid-tile>
+    <mat-grid-tile [colspan]="1">Rating deviant</mat-grid-tile>
+
+    <mat-grid-tile [colspan]="2"><img class="user-image" src="../../assets/players/profileImages/index.png"></mat-grid-tile>
+    <mat-grid-tile [colspan]="1">{{customstats.timePlayed}}</mat-grid-tile><!-- time played -->
+    <mat-grid-tile [colspan]="1">{{stats[2]}}</mat-grid-tile><!-- wins -->
+    <mat-grid-tile [colspan]="1">{{stats[3]}}</mat-grid-tile><!-- losses -->
+    <mat-grid-tile [colspan]="1">{{customstats['winRate']}}</mat-grid-tile><!-- win rate -->
+    <mat-grid-tile [colspan]="1">{{stats[25]}}</mat-grid-tile><!-- XP -->
+    <mat-grid-tile [colspan]="1">{{stats[26]}}</mat-grid-tile><!-- Account Level -->
+    <mat-grid-tile [colspan]="1">{{stats[56]}}</mat-grid-tile><!-- AI plays-->
+    <mat-grid-tile [colspan]="1">{{stats[70]}}</mat-grid-tile><!-- Rating mean -->
+    <mat-grid-tile [colspan]="1">{{stats[71]}}</mat-grid-tile><!-- Rating deviant -->
+
+    <mat-grid-tile [colspan]="11"></mat-grid-tile>
+  </mat-grid-list>
+
+  <div id="ranking-container">
+
+    <div class="ranking-alignment-box">
+      <div class="ranking-box">
+        <div class="ranking-title">Ranked 2v2 plays</div>
+        <div class="solo-ranked">r2v2 wins: {{stats[10]}}</div>
+        <div class="solo-ranked">r2v2 losses: {{stats[11]}}</div>
+      </div>
+    </div>
+
+    <div class="ranking-alignment-box">
+      <div class="ranking-box">
+        <div class="ranking-title">Ranked 3v3 plays</div>
+        <div class="solo-ranked">r3v3 wins: {{stats[12]}}</div>
+        <div class="solo-ranked">r3v3 losses: {{stats[13]}}</div>
+      </div>
+    </div>
+
+    <div class="ranking-alignment-box">
+      <div class="ranking-box">
+        <div class="ranking-title">Unranked 2v2 plays</div>
+        <div class="solo-ranked">u2v2 wins: {{stats[14]}}</div>
+        <div class="solo-ranked">u2v2 losses: {{stats[15]}}</div>
+      </div>
+    </div>
+
+    <div class="ranking-alignment-box">
+      <div class="ranking-box">
+        <div class="ranking-title">Unranked 3v3 plays</div>
+        <div class="solo-ranked">r3v3 wins: {{stats[16]}}</div>
+        <div class="solo-ranked">r3v3 losses: {{stats[17]}}</div>
+      </div>
+    </div>
+
+    <div class="ranking-alignment-box">
+      <div class="ranking-box">
+        <div class="ranking-title">Brawl plays</div>
+        <div class="solo-ranked">brawl wins: {{stats[18]}}</div>
+        <div class="solo-ranked">brawl losses: {{stats[19]}}</div>
+      </div>
+    </div>
+
+    <div class="ranking-alignment-box">
+      <div class="ranking-box">
+        <div class="ranking-title">Battleground plays</div>
+        <div class="solo-ranked">Bg wins: {{stats[22]}}</div>
+        <div class="solo-ranked">Bg losses: {{stats[23]}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="champions-container">
+    <table>
+      <tr>
+        <th colspan="2">Champion</th>
+        <th>Time Played</th>
+
+        <th>Ranked 2v2 wins</th>
+        <th>Ranked 2v2 losses</th>
+        <th>Ranked 3v3 wins</th>
+        <th>Ranked 3v3 losses</th>
+        <th>Unranked 2v2 wins</th>
+        <th>Unranked 2v2 losses</th>
+        <th>Unranked 3v3 wins</th>
+        <th>Unranked 3v3 losses</th>
+
+        <th>Brawl wins</th>
+        <th>Brawl losses</th>
+        <th>Battleground wins</th>
+        <th>Battleground losses</th>
+      </tr>
+      <ng-container *ngFor="let thing of gitMapping">
+        <ng-container *ngIf ="thing.StackableId>11000">
+          <ng-container *ngIf="thing.StackableId < 12000">
+            <tr>
+              <td><img class="champion-image" src="../../assets/champions/images/{{thing.Icon}}.jpg"></td>
+              <td>
+                {{thing.EnglishLocalizedName}}<br>
+                <div style="font-size: small;">
+                  wins {{stats[thing.StackableId+1000]}}, losses {{stats[thing.StackableId+2000]}}<br>
+                  level {{stats[thing.StackableId+29000]}}, {{stats[thing.StackableId]}} xp
+                </div>
+              </td>
+
+              <td> {{stats[thing.StackableId+5000]}}</td>
+              <td> {{stats[thing.StackableId+6000]}}</td>
+              <td> {{stats[thing.StackableId+7000]}}</td>
+              <td> {{stats[thing.StackableId+8000]}}</td>
+              <td> {{stats[thing.StackableId+9000]}}</td>
+              <td> {{stats[thing.StackableId+10000]}}</td>
+              <td> {{stats[thing.StackableId+11000]}}</td>
+              <td> {{stats[thing.StackableId+12000]}}</td>
+              <td> {{stats[thing.StackableId+13000]}}</td>
+
+              <td> {{stats[thing.StackableId+14000]}}</td>
+              <td> {{stats[thing.StackableId+15000]}}</td>
+              <td> {{stats[thing.StackableId+16000]}}</td>
+              <td> {{stats[thing.StackableId+17000]}}</td>
+            </tr>
+          </ng-container>
+        </ng-container>
+      </ng-container>
+    </table>
+  </div>
+</div>
