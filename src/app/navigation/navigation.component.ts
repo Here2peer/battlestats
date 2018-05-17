@@ -1,5 +1,6 @@
-import {Component, HostBinding, HostListener, Input, OnInit} from '@angular/core';
+import {Component, HostBinding, HostListener, Input, OnInit, ViewChild} from '@angular/core';
 import {NavigationService} from './navigation.service';
+import {MatMenuTrigger} from '@angular/material';
 
 @Component({
   selector: 'app-navigation',

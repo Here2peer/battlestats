@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ChampionsService} from './champions.service';
-import { MaterialModule} from '../modules/material/material.module';
-import {MatCardModule} from '@angular/material';
+import {isBoolean} from 'util';
 
 @Component({
   selector: 'app-champions',
@@ -16,16 +15,51 @@ export class ChampionsComponent implements OnInit {
   melee: any;
   ranged: any;
   support: any;
+  champions: any;
+  lore: boolean;
+
+  gameplay: any;
+  english: any;
+  newgameplay: any;
 
   constructor(private championsService: ChampionsService) { }
 
+  activateClass(champion) {
+    champion.active = !champion.active;
+  }
+
+  activateLore(champion) {
+    champion.lore = isBoolean();
+    champion.lore = !champion.lore;
+  }
+
+  activateSkills(skills) {
+    skills.active = !skills.active;
+  }
+
   ngOnInit() {
     this.championsService.getChampions().subscribe((data: any) => {
+        this.catagory = data;
+        this.champions = this.catagory['champions'];
+        console.log(this.catagory);
+        this.melee = this.champions['melee'];
+        this.ranged = this.champions['ranged'];
+        this.support = this.champions['support'];
+        console.log(this.melee);
+      }
+    );
+    this.championsService.getGameplay().subscribe((data: any) => {
+      console.log(data);
+        this.gameplay = data.characters;
+      }
+    );
+    this.championsService.getNewGameplay().subscribe((data: any) => {
         console.log(data);
-        this.catagory = data['champions'];
-        this.melee = this.catagory['melee'];
-        this.ranged = this.catagory['ranged'];
-        this.support = this.catagory['support'];
+        this.newgameplay = data.characters;
+      }
+    );
+    this.championsService.getEnglishTexts().subscribe((data: any) => {
+        this.english = data;
       }
     );
   }

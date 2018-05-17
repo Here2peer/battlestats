@@ -48,4 +48,15 @@ li{
 
 .champion-image {
   height: 60px;
+=======
+}
+
+.mat-grid-tile {
+  background: lightgray;
+  color: #031737;
+}
+
+.tileTitle{
+  background: none;
+  color: lightgray;
 }

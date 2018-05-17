@@ -1,0 +1,37 @@
+.landingwrapper{
+  max-width: 70%;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+.newswrapper{
+  color: lightgray !important;
+  max-width: 40%;
+  float: right;
+}
+
+.mat-grid-tile {
+  background: lightgray;
+  color: #031737;
+}
+
+.mat-expansion-panel {
+  margin: 1em 0 1em 0;
+}
+
+.mat-panel-title {
+  margin: 0 auto;
+}
+
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1000px) {
+  .newswrapper{
+    color: lightgray !important;
+    max-width: 100%;
+    float: right;
+  }
+}
+
+

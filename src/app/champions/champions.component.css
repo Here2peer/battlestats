@@ -3,18 +3,84 @@ li {
 }
 
 .champion-cat {
-  text-align: center;
+  text-align: left;
+  min-height: 250px;
+  position: relative;
 }
 
 .champion{
-  max-width: 200px;
+  display: inline-block;
+  max-width: 10em;
   text-align: center;
-  background: lightgray;
-  color: black;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #d36f15;
+  color: white;
+  margin-right: 1em;
+  padding: 0px;
 }
 
-.portrait{
-  max-width: 100%;
+.mat-card-image{
+  margin-bottom: 0px;
+  width: 100%;
+
+}
+
+.mat-card-title {
+  font-size: 20px;
+  height: 12px;
+
+}
+
+.mat-card-header{
+  display: block;
+  margin-bottom: 1em;
+}
+
+
+.mat-card-subtitle {
+  font-size: 12px;
+  height: 0px;
+
+}
+
+.skills{
+  display: none;
+}
+
+.lore{
+  display: none;
+}
+
+.skills img{
+  width: 25%;
+  height: 25%;
+  margin: 0;
+}
+
+.champion button{
+  display: none;
+}
+
+.champion.active{
+  width: 100%;
+  height: 100%;
+  max-width: 30em;
+}
+
+.champion.active.skills{
   display: block;
 }
+
+.champion.active button{
+  display: inline;
+  float: left;
+}
+
+.skills.active{
+  float: left;
+  margin: 0;
+}
+
+.lore.active{
+  display: block;
+}
+

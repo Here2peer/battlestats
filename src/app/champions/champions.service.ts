@@ -10,5 +10,14 @@ export class ChampionsService {
   getChampions() {
     return this.http.get('./assets/champions/champions.json');
   }
+  getGameplay() {
+    return this.http.get('./assets/champions/gameplay.json');
+  }
+  getNewGameplay() {
+    return this.http.get('./assets/champions/newgameplay.json');
+  }
+  getEnglishTexts() {
+    return this.http.get('./assets/champions/English.json');
+  }
 
 }

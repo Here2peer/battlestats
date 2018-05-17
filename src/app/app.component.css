@@ -1,0 +1,18 @@
+.background {
+  background: url('/../assets/backgrounds/lqLb3oJyaPLZjpB6S2e8.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-width: 100%;
+  overflow: hidden;
+  min-height: 56em;
+  padding-top: 66px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 768px) {
+  .background{
+    padding-top: 0px;
+  }
+}

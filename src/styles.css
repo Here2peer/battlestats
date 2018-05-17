@@ -1,14 +1,14 @@
 @import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 
 /* You can add global styles to this file, and also import other style files */
-body {
-  margin: 0;
-  background: #031737;
-  color: white;
-}
 
 p{
   color: white;
+}
+
+html {
+  overflow-y: scroll;
+  height: 100%;
 }
 
 html,
@@ -19,6 +19,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background: #031737;
+  color: white;
 }
 
 a {
@@ -26,14 +28,23 @@ a {
   color: inherit;
 }
 
+
+
 .container {
   overflow: hidden;
   *zoom: 1;
-  margin: 0 20px;
+  min-height: 100%;
 }
 
 .site-content {
-  padding-top: 66px;
+}
+
+.site-container {
+  min-height: 30em;
+}
+
+.site-pusher {
+  min-height: 30em;
 }
 
 /* HEADER */
@@ -44,6 +55,7 @@ a {
   line-height: 66px;
   color: #031737;
   background-color: lightgray;
+  position: fixed;
 }
 
 .header__logo {
@@ -81,7 +93,6 @@ a {
   }
 
   .site-container {
-    overflow: hidden;
   }
 
   .site-pusher {
@@ -91,13 +102,11 @@ a {
   }
 
   .site-content {
-    position: absolute;
     top: 66px;
     right: 0;
     left: 0;
     bottom: 0;
     padding-top: 0;
-    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
   }
 
