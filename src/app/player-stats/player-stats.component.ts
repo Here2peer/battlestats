@@ -49,5 +49,14 @@ export class PlayerStatsComponent implements AfterViewInit {
       }
     );
   }
+
+  getChartData() {
+    let chartData;
+    chartData = [
+      {data: [this.stats[10], this.stats[14], this.stats[12], this.stats[16], this.stats[18], this.stats[22]], label: 'wins'},
+      {data: [this.stats[11], this.stats[15], this.stats[13], this.stats[17], this.stats[19], this.stats[23]], label: 'losses'}
+    ];
+    return chartData;
+  }
 }
 

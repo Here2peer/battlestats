@@ -15,6 +15,8 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {MaterialModule} from './modules/material/material.module';
 import { SteamAuthComponent } from './steam-auth/steam-auth.component';
 import { TournamentComponent } from './tournament/tournament.component';
+import { ChartsComponent } from './charts/charts.component';
+import { ChartsModule} from 'ng2-charts';
 
 
 @NgModule({
@@ -29,13 +31,15 @@ import { TournamentComponent } from './tournament/tournament.component';
     LandingComponent,
     ChampionsComponent,
     SteamAuthComponent,
-    TournamentComponent
+    TournamentComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
