@@ -6,7 +6,7 @@ li {
   text-align: left;
   min-height: 250px;
   position: relative;
-  padding-left: 1em;
+  padding-left: 2em;
 }
 
 .mat-card {
@@ -17,7 +17,6 @@ li {
   color: white;
   margin-right: 1em;
   margin-bottom: 1em;
-  padding: 0px;
 }
 
 .mat-card-header{
@@ -112,7 +111,7 @@ li {
 .center {
   position: absolute; /* or absolute */
   top: 0;
-  left: 2%;
+  left: 2em;
 }
 
 .skills img{
@@ -150,4 +149,5 @@ li {
   .mat-card-lg-image {
     width: 35%;
   }
+
 }
