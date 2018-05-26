@@ -122,7 +122,7 @@ li {
 .skillcard {
   float: left;
   max-width: 17em;
-  min-height: 25em;
+  min-height: 1em; 'todo fix card height old value 25em'
   margin-top: 1em;
   margin-left: 1em;
 }
@@ -134,7 +134,7 @@ li {
 .battlecards {
   float: left;
   max-width: 15em;
-  min-height: 25em;
+  min-height: 1em; 'todo fix card height old value 24em'
   margin-top: 1em;
   margin-left: 1em;
 }
