@@ -15,7 +15,7 @@
 <div class="background">
 <!-- Tabs content -->
 <div [ngClass]="{show: activeTab=='myTourneys', hide: activeTab!='myTourneys'}">
-  <h3>My Tournaments</h3>
+  <h3>My Tournaments {{data["champions"]["melee"][0]["name"]}}</h3>
   <p>Create new tournament here [link]</p>
   <h3>Tournaments</h3>
   <div class="mytournamentdiv">
