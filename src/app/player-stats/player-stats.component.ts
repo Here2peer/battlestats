@@ -1,4 +1,4 @@
-import {AfterViewInit, Component} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {PlayerStatsService} from './player-stats.service';
 import {PlayerService} from './player.service';
 
@@ -9,7 +9,7 @@ import {PlayerService} from './player.service';
   providers: [PlayerStatsService, PlayerService]
 })
 
-export class PlayerStatsComponent implements AfterViewInit {
+export class PlayerStatsComponent implements OnInit {
   playerData: any;
   attribute: any;
   stats: any;
@@ -26,7 +26,7 @@ export class PlayerStatsComponent implements AfterViewInit {
 
   constructor(private playerStatsService: PlayerStatsService, private playerService: PlayerService) { }
 
-  ngAfterViewInit() {
+  ngOnInit() {
     this.playerService.getPlayer().subscribe((data: any) => {
         console.log(data);
         this.playerData = data['data'];
@@ -39,7 +39,7 @@ export class PlayerStatsComponent implements AfterViewInit {
     );
 
     this.playerStatsService.getStatsMapping().subscribe((data: any) => {
-        console.log(data);
+        // console.log(data);
         this.statsMapping = data;
       }
     );
