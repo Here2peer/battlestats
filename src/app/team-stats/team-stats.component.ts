@@ -15,6 +15,6 @@ export class TeamStatsComponent implements OnInit {
   ngOnInit() {
     this.teamStatsService.getTeamStats().subscribe((data: any) => {
       this.teamstats = data;
-    };
+    });
   }
 }
