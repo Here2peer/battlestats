@@ -704,3 +704,14 @@
 .header{
   z-index: 100;
 }
+
+.search {
+  width: 100%;
+}
+
+.form {
+  min-width: 100px;
+  max-width: 300px;
+  width: 100%;
+  float: right;
+}
