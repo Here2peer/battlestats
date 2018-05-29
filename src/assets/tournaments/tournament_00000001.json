@@ -7,11 +7,12 @@
 		{"playerID": "00000004"}
 	],
 	"matches": [
-		{"match_number": 1,
-		"match_id": 561527365},
-		{"match_number": 2,
-		"match_id": 0},
-		{"match_number": 3,
-		"match_id": 0}
+    [
+      {"match_number": 1, "match_id": 561527365, "p1": "00000001", "p2": "00000002", "match-winner": "00000001"},
+      {"match_number": 2, "match_id": 0, "p1": "00000003", "p2": "00000004", "match-winner": 0}
+    ],
+    [
+      {"match_number": 3, "match_id": 0, "p1": "00000001", "p2": 0, "match-winner": 0}
+    ]
 	]
 }

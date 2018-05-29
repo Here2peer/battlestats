@@ -19,7 +19,7 @@ export class TournamentComponent implements OnInit {
       console.log(data);
       this.data = data;
     });
-    //TODO: Implement tournament builder function?
+    // TODO: Implement tournament builder function?
   }
 
 
