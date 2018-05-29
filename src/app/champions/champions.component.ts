@@ -47,7 +47,7 @@ export class ChampionsComponent implements OnInit {
       }
     );
     this.championsService.getNewGameplay().subscribe((data: any) => {
-        //console.log(data);
+        // console.log(data);
         this.newgameplay = data.characters;
       }
     );

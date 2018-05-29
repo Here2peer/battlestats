@@ -715,3 +715,9 @@
   width: 100%;
   float: right;
 }
+
+.searchbutton {
+  max-height: 40px;
+  float: left;
+  color: white;
+}
