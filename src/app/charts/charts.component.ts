@@ -48,7 +48,7 @@ export class ChartsComponent implements OnInit {
   ngOnInit() {
     this.playerService.getPlayer().subscribe((data: any) => {
       console.log(data);
-      const playerData = data['data'];
+      const playerData = data['data'][0];
       const attribute = playerData['attributes'];
       this.stats = attribute['stats'];
       this.barChartData = [
