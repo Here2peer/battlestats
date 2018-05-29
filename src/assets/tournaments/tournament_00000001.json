@@ -1,0 +1,17 @@
+{
+	"timestamp":"2018-05-28, 13:40",
+	"participants": [
+		{"playerID": "00000001"},
+		{"playerID": "00000002"},
+		{"playerID": "00000003"},
+		{"playerID": "00000004"}
+	],
+	"matches": [
+		{"match_number": 1,
+		"match_id": 561527365},
+		{"match_number": 2,
+		"match_id": 0},
+		{"match_number": 3,
+		"match_id": 0}
+	]
+}

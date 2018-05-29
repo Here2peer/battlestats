@@ -15,9 +15,11 @@ export class TournamentComponent implements OnInit {
   constructor(private tournamentService: TournamentService) { }
 
   ngOnInit() {
-    this.tournamentService.getChampions().subscribe((data: any) => {
+    this.tournamentService.getTournamentData().subscribe((data: any) => {
+      console.log(data);
       this.data = data;
     });
+    //TODO: Implement tournament builder function?
   }
 
 

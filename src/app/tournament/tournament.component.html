@@ -15,7 +15,7 @@
 <div class="background">
 <!-- Tabs content -->
 <div [ngClass]="{show: activeTab=='myTourneys', hide: activeTab!='myTourneys'}">
-  <h3>My Tournaments {{data["champions"]["melee"][0]["name"]}}</h3>
+  <h3>My Tournaments</h3>
   <p>Create new tournament here [link]</p>
   <h3>Tournaments</h3>
   <div class="mytournamentdiv">
@@ -36,7 +36,9 @@
   <h3>Current Tournament: </h3>
   <p>Tournament information, schedule, matches played here...</p>
 
-  <main id="tournament">
+  <p>Database file last updated on {{data["timestamp"]}}</p>
+
+  <!--<main id="tournament">
     <ul class="round round-1">
       <li class="spacer">&nbsp;</li>
 
@@ -139,7 +141,7 @@
 
       <li class="spacer">&nbsp;</li>
     </ul>
-  </main>
+  </main>-->
 </div>
 </div>
 </div>
