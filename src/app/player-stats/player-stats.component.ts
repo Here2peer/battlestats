@@ -29,7 +29,7 @@ export class PlayerStatsComponent implements OnInit {
   ngOnInit() {
     this.playerService.getPlayer().subscribe((data: any) => {
         console.log(data);
-        this.playerData = data['data'];
+        this.playerData = data['data'][0];
         this.attribute = this.playerData['attributes'];
         this.stats = this.attribute['stats'];
         this.customstats = this.attribute['customstats'];
