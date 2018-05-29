@@ -32,6 +32,7 @@ export class PlayerStatsComponent implements OnInit {
         this.playerData = data['data'][0];
         this.attribute = this.playerData['attributes'];
         this.stats = this.attribute['stats'];
+        console.log(this.stats);
         this.customstats = this.attribute['customstats'];
         this.links = data['links'];
         this.meta = data['meta'];
