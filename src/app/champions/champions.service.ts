@@ -14,7 +14,8 @@ export class ChampionsService {
     return this.http.get('./assets/champions/gameplay.json');
   }
   getNewGameplay() {
-    return this.http.get('./assets/champions/newgameplay.json');
+    // return this.http.get('./assets/champions/newgameplay.json');
+    return this.http.get('http://127.0.0.1:5000/gameplay');
   }
   getEnglishTexts() {
     return this.http.get('./assets/champions/English.json');

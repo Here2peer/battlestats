@@ -37,20 +37,17 @@ export class ChampionsComponent implements OnInit {
     this.championsService.getChampions().subscribe((data: any) => {
         this.catagory = data;
         this.champions = this.catagory['champions'];
-        console.log(this.catagory);
         this.melee = this.champions['melee'];
         this.ranged = this.champions['ranged'];
         this.support = this.champions['support'];
-        console.log(this.melee);
       }
     );
     this.championsService.getGameplay().subscribe((data: any) => {
-      console.log(data);
         this.gameplay = data.characters;
       }
     );
     this.championsService.getNewGameplay().subscribe((data: any) => {
-        console.log(data);
+        //console.log(data);
         this.newgameplay = data.characters;
       }
     );
