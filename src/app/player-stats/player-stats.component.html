@@ -1,8 +1,10 @@
-<div class="user-container" *ngIf="gitMapping">
+<div class="user-container" *ngIf="stats">
   <table class="player-overall-stats">
     <tr class="top-row">
       <th class="user" rowspan="2"><img class="user-image" src="../../assets/players/profileImages/index.png"></th>
       <th class="username" rowspan="2">{{attribute.name}}</th>
+
+      <th rowspan="2"><a [routerLink]="['/team', {'player': attribute.name}]">view player teams</a></th>
       <th class="filler" rowspan="2"></th>
       <td>Time played</td>
       <td class="mobile-hide" >Wins</td>

@@ -46,7 +46,7 @@ export class ChartsComponent implements OnInit {
   constructor(private playerService: PlayerService) { }
 
   ngOnInit() {
-    this.playerService.getPlayer().subscribe((data: any) => {
+    this.playerService.getPlayer("Joltz", false).subscribe((data: any) => {
       console.log(data);
       const playerData = data['data'][0];
       const attribute = playerData['attributes'];

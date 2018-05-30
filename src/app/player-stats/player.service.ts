@@ -8,8 +8,11 @@ export class PlayerService {
 
   constructor(private http: HttpClient) { }
 
-  getPlayer() {
-    // return this.http.get('./assets/players/player.json');
-    return this.http.get('http://127.0.0.1:5000/player');
+  getPlayer(playerName: string, id: boolean) {
+    if (id) {
+      return this.http.get('http://127.0.0.1:5000/player?player=' + playerName + '&id=true');
+    } else {
+      return this.http.get('http://127.0.0.1:5000/player?player=' + playerName);
+    }
   }
 }

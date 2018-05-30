@@ -47,3 +47,11 @@
   text-align: center;
   color: black;
 }
+
+.team-without-name{
+  color: red;
+}
+
+.small-filler {
+  width: 5em;
+}

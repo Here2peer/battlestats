@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TeamStatsService} from './team-stats.service';
+import { PlayerService } from '../player-stats/player.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-team-stats',
@@ -10,11 +12,37 @@ import {TeamStatsService} from './team-stats.service';
 export class TeamStatsComponent implements OnInit {
 
   teamstats: any;
-  constructor(private teamStatsService: TeamStatsService) { }
+  teamStatsFetched: boolean;
+
+  playerData: any;
+  attribute: any;
+  stats: any;
+  customstats: any;
+
+  constructor(private teamStatsService: TeamStatsService,
+              private playerService: PlayerService,
+              private route: ActivatedRoute,
+              ) { }
 
   ngOnInit() {
-    this.teamStatsService.getTeamStats().subscribe((data: any) => {
+    this.teamStatsFetched = false;
+    this.teamStatsService.getTeamStats('Arkdn').subscribe((data: any) => {
       this.teamstats = data;
     });
+    let player_name = 'Joltz';
+    this.route.params.subscribe(params => {
+      if (params['player'] === undefined) {
+        player_name = 'Joltz';
+      } else {
+        player_name = params['player'];
+      }
+    });
+  this.playerService.getPlayer(player_name, false).subscribe((data: any) => {
+        this.playerData = data['data'][0];
+        this.attribute = this.playerData['attributes'];
+        this.stats = this.attribute['stats'];
+        this.customstats = this.attribute['customstats'];
+      }
+    );
   }
 }

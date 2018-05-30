@@ -7,11 +7,7 @@ import {HttpClient} from '@angular/common/http';
 export class TeamStatsService {
   constructor(private http: HttpClient) {}
 
-  getStatsMapping() {
-    return this.http.get('./assets/players/statsMapping.json');
-  }
-
-  getTeamStats() {
-    return this.http.get('./assets/players/gitMappings.json');
+  getTeamStats(playerName: string) {
+    return this.http.get('http://127.0.0.1:5000/team?player=' + playerName);
   }
 }
