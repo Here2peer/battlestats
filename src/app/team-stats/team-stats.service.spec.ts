@@ -2,7 +2,7 @@ import { TestBed, inject } from '@angular/core/testing';
 
 import { TeamStatsService } from './team-stats.service';
 
-describe('PlayerStatsService', () => {
+describe('TeamStatsService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [TeamStatsService]

@@ -1,0 +1,49 @@
+@media only screen and (max-width: 1145px) {
+
+
+  #ranking-container{
+    display: none;
+  }
+
+  .mobile-hide{
+    display:none !important;
+  }
+}
+
+.team-overall-stats{
+  background: rgb(0,0,0,0.5);
+}
+.top-row th{
+  height: 40px;
+  width: 100px;
+
+}
+
+.bottom-row td{
+  height: 40px;
+  width: 100px;
+
+}
+.filler{
+  width: 99.9% !important;
+}
+
+.team-container {
+  padding: 10px 10px;
+  display: inline-block;
+  text-align: center;
+}
+.team{
+}
+
+.user-image {
+  height: 70px;
+  float: left;
+  margin-left: 10px;
+}
+
+.team{
+  max-width: 750px;
+  text-align: center;
+  color: black;
+}
