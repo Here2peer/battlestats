@@ -25,19 +25,16 @@ export class TeamStatsComponent implements OnInit {
               ) { }
 
   ngOnInit() {
-    this.teamStatsFetched = false;
-    this.teamStatsService.getTeamStats('Arkdn').subscribe((data: any) => {
-      this.teamstats = data;
-    });
     let player_name = 'Joltz';
     this.route.params.subscribe(params => {
-      if (params['player'] === undefined) {
-        player_name = 'Joltz';
-      } else {
+      if (params['player'] !== undefined) {
         player_name = params['player'];
       }
     });
-  this.playerService.getPlayer(player_name, false).subscribe((data: any) => {
+    this.teamStatsService.getTeamStats(player_name).subscribe((data: any) => {
+      this.teamstats = data;
+    });
+    this.playerService.getPlayer(player_name, false).subscribe((data: any) => {
         this.playerData = data['data'][0];
         this.attribute = this.playerData['attributes'];
         this.stats = this.attribute['stats'];
