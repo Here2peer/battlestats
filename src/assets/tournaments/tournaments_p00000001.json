@@ -1,0 +1,8 @@
+{
+	"timestamp": "2018-06-01, 09:46",
+	"playerID": "00000001",
+  "tournaments": [
+    {"tournamentID": "00000001", "name": "4-player test tournament"},
+    {"tournamentID": "00000002", "name": "8-player test tournament"}
+  ]
+}
