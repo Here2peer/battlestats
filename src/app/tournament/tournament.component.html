@@ -9,7 +9,7 @@
 <!-- Tab links -->
 <div class="tab">
   <button class="tablinks" (click)="activeTab = 'myTourneys'">My Tournaments</button>
-  <button class="tablinks" (click)="activeTab = 'pubTourneys'" disabled>Public Tournaments</button>
+  <button class="tablinks" (click)="activeTab = 'pubTourneys'">Public Tournaments</button>
   <button class="tablinks" (click)="activeTab = 'currTourney'">Selected Tournament</button>
 </div>
 <div class="background">
@@ -20,7 +20,7 @@
   <h3>Tournaments</h3>
   <ul class="mytournamentdiv">
     <ng-container *ngFor="let tournament of ownTourneyData?.tournaments">
-      <li>{{ tournament.name }}</li>
+      <li><button (click)="activeTab = 'currTourney'">{{ tournament.name }}</button></li>
     </ng-container>
   </ul>
 </div>
