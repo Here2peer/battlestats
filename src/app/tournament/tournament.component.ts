@@ -20,12 +20,14 @@ export class TournamentComponent implements OnInit {
       console.log(tdata);
       this.ownTourneyData = tdata;
       });
-    this.tournamentService.getTournamentData('00000001').subscribe((data: any) => {
+      this.updateTournamentData('00000001');
+  }
+
+  updateTournamentData(tournamentID) {
+    this.tournamentService.getTournamentData(tournamentID).subscribe((data: any) => {
       console.log(data);
       this.tournamentData = data;
     });
   }
-
-
 
 }
