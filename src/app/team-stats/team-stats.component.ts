@@ -18,6 +18,7 @@ export class TeamStatsComponent implements OnInit {
   attribute: any;
   stats: any;
   customstats: any;
+  error: any;
 
   constructor(private teamStatsService: TeamStatsService,
               private playerService: PlayerService,
@@ -32,7 +33,11 @@ export class TeamStatsComponent implements OnInit {
       }
     });
     this.teamStatsService.getTeamStats(player_name).subscribe((data: any) => {
-      this.teamstats = data;
+      if (!data['errors']) {
+        this.teamstats = data;
+      } else {
+        this.error = data['errors'][0]['title'];
+      }
     });
     this.playerService.getPlayer(player_name, false).subscribe((data: any) => {
         this.playerData = data['data'][0];
