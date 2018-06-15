@@ -90,6 +90,8 @@
       <tr>
         <th mat-sort-header="Champion" colspan="2">Champion</th>
         <th mat-sort-header="Time Played">Time Played (h)</th>
+        <th mat-sort-header="Wins">Total Wins</th>
+        <th mat-sort-header="Losses">Total Losses</th>
 
         <th mat-sort-header="Ranked 2v2 wins" class="mobile-hide">Ranked 2v2 wins</th>
         <th mat-sort-header="Ranked 2v2 losses" class="mobile-hide">Ranked 2v2 losses</th>
@@ -111,12 +113,13 @@
               <td class="champion-name">
                 {{thing.name}}<br>
                 <div style="font-size: small;">
-                  wins {{thing.twins}}, losses {{thing.tloss}}<br>
                   level {{thing.level}}, {{thing.xp}} xp
                 </div>
               </td>
 
               <td> {{thing.time}}</td>
+              <td>{{thing.twins}}</td>
+              <td>{{thing.tloss}}</td>
               <td class="mobile-hide"> {{thing.rwins2}}</td>
               <td class="mobile-hide"> {{thing.rloss2}}</td>
               <td class="mobile-hide"> {{thing.rwins3}}</td>

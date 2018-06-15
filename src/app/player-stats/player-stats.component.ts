@@ -190,6 +190,8 @@ export class PlayerStatsComponent implements OnInit {
       switch (sort.active) {
         case 'Champion': return compare(a.name, b.name, isAsc);
         case 'Time Played': return compare(a.time, b.time, isAsc);
+        case 'Wins': return compare(a.time, b.time, isAsc);
+        case 'Losses': return compare(a.time, b.time, isAsc);
         case 'Ranked 2v2 wins': return compare(+a.rwins2, +b.rwins2, isAsc);
         case 'Ranked 2v2 losses': return compare(+a.rloss2, +b.rloss2, isAsc);
         case 'Ranked 3v3 wins': return compare(+a.rwins3, +b.rwins3, isAsc);
