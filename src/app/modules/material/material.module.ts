@@ -9,7 +9,7 @@ import {
   MatButtonModule,
   MatButtonToggleModule,
   MatTabsModule,
-  MatInputModule
+  MatInputModule, MatSortModule
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -23,6 +23,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatButtonModule,
     MatButtonToggleModule,
     MatInputModule,
+    MatSortModule,
     MatTabsModule,
     MatGridListModule
   ],
@@ -35,6 +36,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatButtonModule,
     MatButtonToggleModule,
     MatInputModule,
+    MatSortModule,
     MatTabsModule,
     MatGridListModule
   ]
