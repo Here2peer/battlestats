@@ -18,11 +18,7 @@ export class SteamComponent implements OnInit {
   ngOnInit() {
     this.steamService.getSteamUser().subscribe((data: any) =>  {
       this.steamuser = data;
-      if (this.steamuser == null) {
-        console.log(this.steamuser);
-      } else {
-        console.log('DATA FOUND!!!' + this.steamuser);
-      }
+      console.log(this.steamuser);
     }
     );
   }
