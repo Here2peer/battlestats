@@ -10,6 +10,6 @@ export class ChampionsService {
 
   getNewGameplay() {
     // return this.http.get('./assets/champions/newgameplay.json');
-    return this.http.get('http://127.0.0.1:5000/allChampionData');
+    return this.http.get('http://127.0.0.1:5000/champions');
   }
 }
