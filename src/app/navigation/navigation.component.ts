@@ -1,6 +1,7 @@
 import {Component, HostBinding, HostListener, Input, OnInit, ViewChild} from '@angular/core';
 import {NavigationService} from './navigation.service';
 import {MatMenuTrigger} from '@angular/material';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -12,7 +13,7 @@ export class NavigationComponent implements OnInit {
   @HostBinding('class.is-mobile')
   mobile = false;
 
-  constructor(private navigationService: NavigationService) {
+  constructor(private navigationService: NavigationService, private router: Router) {
   }
 
   ngOnInit() {
@@ -22,11 +23,8 @@ export class NavigationComponent implements OnInit {
   }
 
   searchPlayer(playername) {
-    if(playername === '') {
-      console.log('You didnt search for anything!');
-    } else {
-      console.log('searching for player:' + playername);
-    }
+
+    this.router.navigate(['/player-list'], { queryParams: { playername: playername}});
   }
 
 

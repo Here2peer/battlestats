@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TeamStatsService} from './team-stats.service';
-import { PlayerService } from '../player-stats/player.service';
+import { PlayerService } from '../player-services/player.service';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({

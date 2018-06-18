@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, OnChanges, OnInit} from '@angular/core';
-import { PlayerService} from '../player-stats/player.service';
+import { PlayerService} from '../player-services/player.service';
 
 @Component({
   selector: 'app-charts',

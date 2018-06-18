@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SteamService} from './steam.service';
+import {Router} from '@angular/router';
 
 
 @Component({

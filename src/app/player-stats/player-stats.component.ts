@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {PlayerStatsService} from './player-stats.service';
-import {PlayerService} from './player.service';
+import {PlayerService} from '../player-services/player.service';
 import {ActivatedRoute} from '@angular/router';
 import {Sort} from '@angular/material';
 
@@ -23,6 +23,7 @@ export class PlayerStatsComponent implements OnInit {
   sortedData;
   unsortedData = new Array;
   filteredMapping;
+  searched: any;
 
 
   championIds: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
@@ -36,6 +37,10 @@ export class PlayerStatsComponent implements OnInit {
               ) { }
 
   ngOnInit() {
+    this.getPlayerData();
+  }
+
+  getPlayerData() {
     let player_name = 'Joltz';
     this.route.params.subscribe(params => {
       if (params['player'] === undefined) {
