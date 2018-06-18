@@ -9,6 +9,7 @@ import {PlayerService} from '../player-services/player.service';
 })
 export class PlayerListComponent implements OnInit {
   playername: string;
+  playerlist;
 
   constructor(private route: ActivatedRoute, private playerService: PlayerService) { }
 
@@ -16,7 +17,8 @@ export class PlayerListComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       this.playername = params['playername'];
       this.playerService.getPlayer(this.playername, false).subscribe((data: any) => {
-        console.log(data);
+        this.playerlist = data.data;
+        console.log(this.playerlist);
       });
     });
   }

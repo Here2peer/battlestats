@@ -1,3 +1,12 @@
 <div>
-
+<table>
+  <tr>
+    <th>Player name</th>
+    <th>Player id</th>
+  </tr>
+  <tr *ngFor="let players of playerlist">
+    <td>{{players.attributes.name}}</td>
+    <td>{{players.id}}</td>
+  </tr>
+</table>
 </div>

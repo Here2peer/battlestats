@@ -158,7 +158,6 @@ export class PlayerStatsComponent implements OnInit {
           }
         }
         this.sortedData = this.unsortedData.slice();
-        console.log(this.sortedData);
       }
     );
 
