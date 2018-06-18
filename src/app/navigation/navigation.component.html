@@ -20,13 +20,13 @@
 
   <app-steam></app-steam>
 
-
   <div class="form">
-    <img class="searchbutton" src="../../assets/svg/round_search_white_48dp.png">
-    <mat-form-field class="search">
-      <input matInput placeholder="Search for champions, players...">
-    </mat-form-field>
-
+    <button mat-icon-button="" type="submit">
+      <mat-icon (click)="searchPlayer(peram.value)" >search</mat-icon>
+    </button>
+      <mat-form-field class="search">
+        <input matInput (keyup.enter)="searchPlayer(peram.value)" #peram placeholder="Search for players.">
+      </mat-form-field>
   </div>
 </header>
 

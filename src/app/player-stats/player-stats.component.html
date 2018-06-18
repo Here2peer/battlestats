@@ -107,32 +107,32 @@
         <th mat-sort-header="Battleground wins" class="mobile-hide">Battleground wins</th>
         <th mat-sort-header="Battleground losses" class="mobile-hide">Battleground losses</th>
       </tr>
-      <ng-container *ngFor="let thing of sortedData">
+      <ng-container *ngFor="let playerData of sortedData">
             <tr>
-              <td><img class="champion-image" src="../../assets/champions/images/{{thing.icon}}.jpg"></td>
+              <td><img class="champion-image" src="../../assets/champions/images/{{playerData.icon}}.jpg"></td>
               <td class="champion-name">
-                {{thing.name}}<br>
+                {{playerData.name}}<br>
                 <div style="font-size: small;">
-                  level {{thing.level}}, {{thing.xp}} xp
+                  level {{playerData.level}}, {{playerData.xp}} xp
                 </div>
               </td>
 
-              <td> {{thing.time}}</td>
-              <td>{{thing.twins}}</td>
-              <td>{{thing.tloss}}</td>
-              <td class="mobile-hide"> {{thing.rwins2}}</td>
-              <td class="mobile-hide"> {{thing.rloss2}}</td>
-              <td class="mobile-hide"> {{thing.rwins3}}</td>
-              <td class="mobile-hide"> {{thing.rloss3}}</td>
-              <td class="mobile-hide"> {{thing.uwins2}}</td>
-              <td class="mobile-hide"> {{thing.uloss2}}</td>
-              <td class="mobile-hide"> {{thing.uwins3}}</td>
-              <td class="mobile-hide"> {{thing.uloss3}}</td>
+              <td> {{playerData.time}}</td>
+              <td>{{playerData.twins}}</td>
+              <td>{{playerData.tloss}}</td>
+              <td class="mobile-hide"> {{playerData.rwins2}}</td>
+              <td class="mobile-hide"> {{playerData.rloss2}}</td>
+              <td class="mobile-hide"> {{playerData.rwins3}}</td>
+              <td class="mobile-hide"> {{playerData.rloss3}}</td>
+              <td class="mobile-hide"> {{playerData.uwins2}}</td>
+              <td class="mobile-hide"> {{playerData.uloss2}}</td>
+              <td class="mobile-hide"> {{playerData.uwins3}}</td>
+              <td class="mobile-hide"> {{playerData.uloss3}}</td>
 
-              <td class="mobile-hide"> {{thing.bwins}}</td>
-              <td class="mobile-hide"> {{thing.bloss}}</td>
-              <td class="mobile-hide"> {{thing.bgwins}}</td>
-              <td class="mobile-hide"> {{thing.bgloss}}</td>
+              <td class="mobile-hide"> {{playerData.bwins}}</td>
+              <td class="mobile-hide"> {{playerData.bloss}}</td>
+              <td class="mobile-hide"> {{playerData.bgwins}}</td>
+              <td class="mobile-hide"> {{playerData.bgloss}}</td>
             </tr>
       </ng-container>
     </table>

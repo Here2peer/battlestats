@@ -705,9 +705,6 @@
   z-index: 100;
 }
 
-.search {
-  width: 100%;
-}
 
 .form {
   min-width: 100px;
@@ -720,4 +717,11 @@
   max-height: 40px;
   float: left;
   color: white;
+  margin-top: 16px;
+}
+
+button {
+  max-height: 40px;
+  max-width: 40px;
+
 }

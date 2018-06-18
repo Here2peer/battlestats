@@ -21,6 +21,14 @@ export class NavigationComponent implements OnInit {
     });
   }
 
+  searchPlayer(playername) {
+    if(playername === '') {
+      console.log('You didnt search for anything!');
+    } else {
+      console.log('searching for player:' + playername);
+    }
+  }
+
 
 
 }
