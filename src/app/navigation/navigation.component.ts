@@ -24,7 +24,7 @@ export class NavigationComponent implements OnInit {
 
   searchPlayer(playername) {
 
-    this.router.navigate(['/player-list'], { queryParams: { playername: playername}});
+    this.router.navigate(['/player-list'], { queryParams: { playername: playername, search: 1}});
   }
 
 

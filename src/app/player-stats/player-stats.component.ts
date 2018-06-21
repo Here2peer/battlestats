@@ -43,10 +43,11 @@ export class PlayerStatsComponent implements OnInit {
   getPlayerData() {
     let player_name = 'Joltz';
     this.route.params.subscribe(params => {
-      if (params['player'] === undefined) {
+      console.log(params);
+      if (params['id'] === undefined) {
         player_name = 'Joltz';
       } else {
-        player_name = params['player'];
+        player_name = params['id'];
       }
     });
     this.playerService.getPlayer(player_name, false).subscribe((data: any) => {

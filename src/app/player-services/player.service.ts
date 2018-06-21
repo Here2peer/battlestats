@@ -15,4 +15,8 @@ export class PlayerService {
       return this.http.get('http://127.0.0.1:5000/player?player=' + playerName);
     }
   }
+
+  getAllPlayers() {
+    return this.http.get('http://127.0.0.1:5000/players');
+  }
 }

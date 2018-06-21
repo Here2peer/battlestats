@@ -12,7 +12,7 @@ import {PlayerListComponent} from '../../player-list/player-list.component';
 
 const appRoutes: Routes = [
   { path: '', component: LandingComponent },
-  { path: 'player', component: PlayerStatsComponent },
+  { path: 'player/:id', component: PlayerStatsComponent },
   { path: 'team', component: TeamStatsComponent },
   { path: 'champions', component: ChampionsComponent },
   { path: 'tournament', component: TournamentComponent },
