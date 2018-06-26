@@ -18,6 +18,7 @@ import { TournamentComponent } from './tournament/tournament.component';
 import { ChartsComponent } from './charts/charts.component';
 import { ChartsModule} from 'ng2-charts';
 import { PlayerListComponent } from './player-list/player-list.component';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { PlayerListComponent } from './player-list/player-list.component';
     SteamAuthComponent,
     TournamentComponent,
     ChartsComponent,
-    PlayerListComponent
+    PlayerListComponent,
+    LeaderboardComponent
   ],
   imports: [
     BrowserModule,

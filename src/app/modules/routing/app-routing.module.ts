@@ -9,6 +9,7 @@ import {ChampionsComponent} from '../../champions/champions.component';
 import {TournamentComponent} from '../../tournament/tournament.component';
 import {SteamAuthComponent} from '../../steam-auth/steam-auth.component';
 import {PlayerListComponent} from '../../player-list/player-list.component';
+import {LeaderboardComponent} from '../../leaderboard/leaderboard.component';
 
 const appRoutes: Routes = [
   { path: '', component: LandingComponent },
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
   { path: 'tournament', component: TournamentComponent },
   { path: 'steam-auth', component: SteamAuthComponent },
   { path: 'player-list', component: PlayerListComponent },
+  { path: 'leaderboard', component: LeaderboardComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 
