@@ -27,9 +27,9 @@
 <div [ngClass]="{ show: activeTab=='pubTourneys', hide: activeTab!='pubTourneys'}">
   <h3>Public Tournaments</h3>
   <div class="publictournamentdiv">
-    <p>Tourney 1</p>
-    <p>Tourney 2</p>
-    <p>Etc...</p>
+    <ng-container *ngFor="let tournament of allTourneyData?.tournaments">
+      <li><button (click)="activeTab = 'currTourney'; updateTournamentData(tournament.tournamentID)">{{ tournament.name }}</button></li>
+    </ng-container>
   </div>
 </div>
 <div [ngClass]="{show: activeTab=='currTourney', hide: activeTab!='currTourney'}">

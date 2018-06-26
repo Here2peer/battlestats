@@ -12,6 +12,7 @@ export class TournamentComponent implements OnInit {
 
   tournamentData: any;
   ownTourneyData: any;
+  allTourneyData: any;
 
   constructor(private tournamentService: TournamentService) { }
 
@@ -20,7 +21,11 @@ export class TournamentComponent implements OnInit {
       console.log(tdata);
       this.ownTourneyData = tdata;
       });
-      this.updateTournamentData('00000001');
+    this.updateTournamentData('00000001');
+    this.tournamentService.getAllTourneys().subscribe((adata: any) => {
+      console.log(adata);
+      this.allTourneyData = adata;
+    });
   }
 
   updateTournamentData(tournamentID) {
