@@ -17,12 +17,16 @@ export class SteamComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.steamService.getSteamUser().subscribe((data: any) =>  {
+    /*this.steamService.getSteamUser().subscribe((data: any) =>  {
       this.steamuser = data;
       console.log(this.steamuser);
     }
-    );
+    );*/
+    try{
+      this.steamuser = window.location.search.substr(1);
+    } catch(e) {
+      this.steamuser = 0;
+    }
+    console.log(this.steamuser);
   }
-
-
 }
