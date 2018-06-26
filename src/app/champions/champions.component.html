@@ -16,7 +16,7 @@
 
 
 
-          <mat-card-content>
+
             <mat-tab-group class="championGroup buttons" [ngClass]="{'active': item.active}">
               <mat-tab label="Lore">
                 <div class="lore">
@@ -29,7 +29,7 @@
                     <mat-card class="skillcard">
                       <img mat-card-md-image src="../../assets/champions/images/{{item[ability]['icon128']}}.jpg">
                       <mat-card-title>{{item[ability].name}}</mat-card-title>
-                      <mat-card-subtitle>{{item[ability].description}}</mat-card-subtitle>
+                      <mat-card-content>{{item[ability].description}}</mat-card-content>
                     </mat-card>
                   </ng-container>
                 </div>
@@ -40,13 +40,12 @@
                     <mat-card class="battlecards">
                       <img mat-card-md-image src="../../assets/champions/images/{{skills.icon}}.jpg" width="25px">
                       <mat-card-title>{{skills.name}}</mat-card-title>
-                      <mat-card-subtitle>{{skills.description}}</mat-card-subtitle>
+                      <mat-card-content>{{skills.description}}</mat-card-content>
                     </mat-card>
                   </ng-container>
                 </div>
               </mat-tab>
             </mat-tab-group>
-          </mat-card-content>
           </div>
         </mat-card>
       </ng-container>

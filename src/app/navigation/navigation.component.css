@@ -704,3 +704,23 @@
 .header{
   z-index: 100;
 }
+
+
+.form {
+  min-width: 100px;
+  max-width: 300px;
+  float: right;
+}
+
+.searchbutton {
+  max-height: 40px;
+  float: left;
+  color: white;
+  margin-top: 16px;
+}
+
+button {
+  max-height: 40px;
+  max-width: 40px;
+
+}

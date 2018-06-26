@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, OnChanges, OnInit} from '@angular/core';
-import { PlayerService} from '../player-stats/player.service';
+import { PlayerService} from '../player-services/player.service';
 
 @Component({
   selector: 'app-charts',
@@ -46,9 +46,9 @@ export class ChartsComponent implements OnInit {
   constructor(private playerService: PlayerService) { }
 
   ngOnInit() {
-    this.playerService.getPlayer().subscribe((data: any) => {
+    this.playerService.getPlayer("Joltz", false).subscribe((data: any) => {
       console.log(data);
-      const playerData = data['data'];
+      const playerData = data['data'][0];
       const attribute = playerData['attributes'];
       this.stats = attribute['stats'];
       this.barChartData = [

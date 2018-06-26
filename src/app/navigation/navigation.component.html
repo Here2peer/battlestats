@@ -12,13 +12,22 @@
 
   <nav class="menu">
     <a mat-button routerLink="" routerLinkActive="active">Home</a>
-    <a mat-button routerLink="/player" routerLinkActive="active">Player Stats</a>
+    <a mat-button routerLink="/player-list" routerLinkActive="active">Player list</a>
     <a mat-button routerLink="/team" routerLinkActive="active">Team Stats</a>
     <a mat-button routerLink="/champions" routerLinkActive="active">Champion list</a>
     <a mat-button routerLink="/tournament" routerLinkActive="active">Tournament</a>
+    <a mat-button routerLink="/leaderboard" routerLinkActive="active">Leaderboard</a>
   </nav>
 
   <app-steam></app-steam>
 
+  <div class="form">
+    <button mat-icon-button="" type="submit">
+      <mat-icon (click)="searchPlayer(peram.value)" >search</mat-icon>
+    </button>
+      <mat-form-field class="search">
+        <input matInput (keyup.enter)="searchPlayer(peram.value)" #peram placeholder="Search for players.">
+      </mat-form-field>
+  </div>
 </header>
 

@@ -1,8 +1,10 @@
-<div class="user-container" *ngIf="gitMapping">
+<div class="user-container" *ngIf="stats">
   <table class="player-overall-stats">
     <tr class="top-row">
       <th class="user" rowspan="2"><img class="user-image" src="../../assets/players/profileImages/index.png"></th>
       <th class="username" rowspan="2">{{attribute.name}}</th>
+
+      <th rowspan="2"><a [routerLink]="['/team', {'player': attribute.name}]">view player teams</a></th>
       <th class="filler" rowspan="2"></th>
       <td>Time played</td>
       <td class="mobile-hide" >Wins</td>
@@ -84,55 +86,54 @@
     <app-charts></app-charts>
   </div>
   <div class="champions-container">
-    <table>
+    <table matSort (matSortChange)="sortData($event)">
       <tr>
-        <th colspan="2">Champion</th>
-        <th >Time Played</th>
+        <th mat-sort-header="Champion" colspan="2">Champion</th>
+        <th mat-sort-header="Time Played">Time Played (h)</th>
+        <th mat-sort-header="Wins">Total Wins</th>
+        <th mat-sort-header="Losses">Total Losses</th>
 
-        <th class="mobile-hide">Ranked 2v2 wins</th>
-        <th class="mobile-hide">Ranked 2v2 losses</th>
-        <th class="mobile-hide">Ranked 3v3 wins</th>
-        <th class="mobile-hide">Ranked 3v3 losses</th>
-        <th class="mobile-hide">Unranked 2v2 wins</th>
-        <th class="mobile-hide">Unranked 2v2 losses</th>
-        <th class="mobile-hide">Unranked 3v3 wins</th>
-        <th class="mobile-hide">Unranked 3v3 losses</th>
+        <th mat-sort-header="Ranked 2v2 wins" class="mobile-hide">Ranked 2v2 wins</th>
+        <th mat-sort-header="Ranked 2v2 losses" class="mobile-hide">Ranked 2v2 losses</th>
+        <th mat-sort-header="Ranked 3v3 wins" class="mobile-hide">Ranked 3v3 wins</th>
+        <th mat-sort-header="Ranked 3v3 losses" class="mobile-hide">Ranked 3v3 losses</th>
+        <th mat-sort-header="Unranked 2v2 wins" class="mobile-hide">Unranked 2v2 wins</th>
+        <th mat-sort-header="Unranked 2v2 losses" class="mobile-hide">Unranked 2v2 losses</th>
+        <th mat-sort-header="Unranked 3v3 wins" class="mobile-hide">Unranked 3v3 wins</th>
+        <th mat-sort-header="Unranked 3v3 losses"  class="mobile-hide">Unranked 3v3 losses</th>
 
-        <th class="mobile-hide">Brawl wins</th>
-        <th class="mobile-hide">Brawl losses</th>
-        <th class="mobile-hide">Battleground wins</th>
-        <th class="mobile-hide">Battleground losses</th>
+        <th mat-sort-header="Brawl wins" class="mobile-hide">Brawl wins</th>
+        <th mat-sort-header="Brawl losses" class="mobile-hide">Brawl losses</th>
+        <th mat-sort-header="Battleground wins" class="mobile-hide">Battleground wins</th>
+        <th mat-sort-header="Battleground losses" class="mobile-hide">Battleground losses</th>
       </tr>
-      <ng-container *ngFor="let thing of gitMapping">
-        <ng-container *ngIf ="thing.StackableId>11000">
-          <ng-container *ngIf="thing.StackableId < 12000">
+      <ng-container *ngFor="let playerData of sortedData">
             <tr>
-              <td><img class="champion-image" src="../../assets/champions/images/{{thing.Icon}}.jpg"></td>
+              <td><img class="champion-image" src="../../assets/champions/images/{{playerData.icon}}.jpg"></td>
               <td class="champion-name">
-                {{thing.EnglishLocalizedName}}<br>
+                {{playerData.name}}<br>
                 <div style="font-size: small;">
-                  wins {{stats[thing.StackableId+1000]}}, losses {{stats[thing.StackableId+2000]}}<br>
-                  level {{stats[thing.StackableId+29000]}}, {{stats[thing.StackableId]}} xp
+                  level {{playerData.level}}, {{playerData.xp}} xp
                 </div>
               </td>
 
-              <td> {{stats[thing.StackableId+5000]}}</td>
-              <td class="mobile-hide"> {{stats[thing.StackableId+6000]}}</td>
-              <td class="mobile-hide"> {{stats[thing.StackableId+7000]}}</td>
-              <td class="mobile-hide"> {{stats[thing.StackableId+8000]}}</td>
-              <td class="mobile-hide"> {{stats[thing.StackableId+9000]}}</td>
-              <td class="mobile-hide"> {{stats[thing.StackableId+10000]}}</td>
-              <td class="mobile-hide"> {{stats[thing.StackableId+11000]}}</td>
-              <td class="mobile-hide"> {{stats[thing.StackableId+12000]}}</td>
-              <td class="mobile-hide"> {{stats[thing.StackableId+13000]}}</td>
+              <td> {{playerData.time}}</td>
+              <td>{{playerData.twins}}</td>
+              <td>{{playerData.tloss}}</td>
+              <td class="mobile-hide"> {{playerData.rwins2}}</td>
+              <td class="mobile-hide"> {{playerData.rloss2}}</td>
+              <td class="mobile-hide"> {{playerData.rwins3}}</td>
+              <td class="mobile-hide"> {{playerData.rloss3}}</td>
+              <td class="mobile-hide"> {{playerData.uwins2}}</td>
+              <td class="mobile-hide"> {{playerData.uloss2}}</td>
+              <td class="mobile-hide"> {{playerData.uwins3}}</td>
+              <td class="mobile-hide"> {{playerData.uloss3}}</td>
 
-              <td class="mobile-hide"> {{stats[thing.StackableId+14000]}}</td>
-              <td class="mobile-hide"> {{stats[thing.StackableId+15000]}}</td>
-              <td class="mobile-hide"> {{stats[thing.StackableId+16000]}}</td>
-              <td class="mobile-hide"> {{stats[thing.StackableId+17000]}}</td>
+              <td class="mobile-hide"> {{playerData.bwins}}</td>
+              <td class="mobile-hide"> {{playerData.bloss}}</td>
+              <td class="mobile-hide"> {{playerData.bgwins}}</td>
+              <td class="mobile-hide"> {{playerData.bgloss}}</td>
             </tr>
-          </ng-container>
-        </ng-container>
       </ng-container>
     </table>
   </div>

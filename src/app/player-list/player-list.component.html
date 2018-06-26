@@ -1,0 +1,26 @@
+<div class="playerlistcontainer">
+  <table *ngIf="search == 1">
+    <tr>
+      <th>Player name</th>
+      <th>Player id</th>
+    </tr>
+    <tr *ngFor="let players of playerlist">
+      <td>{{players.attributes.name}}</td>
+      <td>{{players.id}}</td>
+      <td><button mat-button routerLink="/player/{{players.attributes.name}}" >Show Player</button></td>
+    </tr>
+  </table>
+
+  <table *ngIf="search == undefined">
+    <tr>
+      <th>Player name</th>
+      <th>Player id</th>
+    </tr>
+    <tr *ngFor="let allpalyers of playerlist">
+      <td>{{allpalyers.battlerite_name}}</td>
+      <td>{{allpalyers.battlerite_id}}</td>
+      <td><button mat-button routerLink="/player/{{allpalyers.battlerite_name}}" >Show Player</button></td>
+    </tr>
+  </table>
+
+</div>

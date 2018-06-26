@@ -1,3 +1,84 @@
-<p>
-  SHOULD CONTAIN TEAMSTATS
-</p>
+<div class="team-container" *ngIf="customstats">
+  <table class="team-overall-stats">
+    <tr class="top-row">
+      <th class="team" rowspan="2"><img class="user-image" src="../../assets/players/profileImages/index.png"></th>
+      <th class="teamname" rowspan="2">{{attribute.name}}</th>
+      <th class="filler" rowspan="2"></th>
+      <td>Time played</td>
+      <td class="mobile-hide" >Wins</td>
+      <td class="mobile-hide" >Losses</td>
+      <td>Win rate</td>
+      <td class="mobile-hide" >XP</td>
+      <td>Account Level</td>
+      <td class="mobile-hide" >AI plays</td>
+      <td class="mobile-hide" >Rating mean</td>
+      <td class="mobile-hide" >Rating deviant</td>
+    </tr>
+    <tr class="bottom-row">
+
+      <td>{{customstats.timePlayed}}</td><!-- time played -->
+      <td class="mobile-hide">{{stats[2]}}</td><!-- wins -->
+      <td class="mobile-hide" >{{stats[3]}}</td><!-- losses -->
+      <td>{{customstats['winRate']}}</td><!-- win rate -->
+      <td class="mobile-hide" >{{stats[25]}}</td><!-- XP -->
+      <td>{{stats[26]}}</td><!-- Account Level -->
+      <td class="mobile-hide" >{{stats[56]}}</td><!-- AI plays-->
+      <td class="mobile-hide">{{stats[70]}}</td><!-- Rating mean -->
+      <td class="mobile-hide" >{{stats[71]}}</td><!-- Rating deviant -->
+    </tr>
+  </table>
+</div>
+<div *ngIf="!error">
+  <div *ngIf="!teamstats">
+    <img src="../../assets/teamstats/giphy.gif" width="150px" height="150px" >
+  </div>
+  <div *ngIf="teamstats" >
+    <h3>Teams of player {{attribute.name}}</h3>
+    <div class="team-list">
+      <table>
+        <tr>
+          <th>Team name</th>
+          <th>Teammates</th>
+          <th>Wins</th>
+          <th>Losses</th>
+
+          <th class="small-filler"></th>
+
+          <th>Placement<br>games left</th>
+          <th>Current<br>league</th>
+          <th>Current<br>division</th>
+          <th>Top<br>league</th>
+          <th>Top<br>division</th>
+        </tr>
+          <ng-container *ngFor="let team of teamstats">
+            <tr>
+              <td *ngIf="team.attributes.name != '' ">{{team['attributes'].name}}</td>
+              <td *ngIf="team.attributes.name == '' " class="team-without-name">Nameless team</td>
+
+              <td>
+              <ng-container *ngFor="let id of team.attributes.stats.members" >
+                {{team.attributes.stats.member_names[id]}}
+              </ng-container>
+              </td>
+
+              <td>{{team.attributes.stats.wins}}</td>
+              <td>{{team.attributes.stats.losses}}</td>
+
+              <td></td>
+
+              <td>{{team.attributes.stats.placementGamesLeft}}</td>
+              <td>{{team.attributes.stats.league}}</td>
+              <td>{{team.attributes.stats.division}}</td>
+
+              <td>{{team.attributes.stats.topLeague}}</td>
+              <td>{{team.attributes.stats.topDivision}}</td>
+
+            </tr>
+          </ng-container>
+      </table>
+    </div>
+  </div>
+</div>
+<div *ngIf="error">
+  <h3>Error: {{error}}</h3>
+</div>

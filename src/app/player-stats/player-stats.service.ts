@@ -15,4 +15,9 @@ export class PlayerStatsService {
     return this.http.get('./assets/players/gitMappings.json');
   }
 
+  getAvatar(steamid) {
+    const url = 'http://127.0.0.1:5000/avatar?steamid=' + steamid;
+    return this.http.get(url);
+  }
+
 }

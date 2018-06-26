@@ -7,13 +7,19 @@ import {PageNotFoundComponent} from '../../page-not-found/page-not-found.compone
 import {LandingComponent} from '../../landing/landing.component';
 import {ChampionsComponent} from '../../champions/champions.component';
 import {TournamentComponent} from '../../tournament/tournament.component';
+import {SteamAuthComponent} from '../../steam-auth/steam-auth.component';
+import {PlayerListComponent} from '../../player-list/player-list.component';
+import {LeaderboardComponent} from '../../leaderboard/leaderboard.component';
 
 const appRoutes: Routes = [
   { path: '', component: LandingComponent },
-  { path: 'player', component: PlayerStatsComponent },
+  { path: 'player/:id', component: PlayerStatsComponent },
   { path: 'team', component: TeamStatsComponent },
   { path: 'champions', component: ChampionsComponent },
   { path: 'tournament', component: TournamentComponent },
+  { path: 'steam-auth', component: SteamAuthComponent },
+  { path: 'player-list', component: PlayerListComponent },
+  { path: 'leaderboard', component: LeaderboardComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 
