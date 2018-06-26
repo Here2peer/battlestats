@@ -18,28 +18,28 @@
   <h3>My Tournaments</h3>
   <p>Create new tournament here [link]</p>
   <h3>Tournaments</h3>
-  <div class="mytournamentdiv">
-    <p>Tourney 1</p>
-    <p>Tourney 2</p>
-    <p>Etc...</p>
-  </div>
+  <ul class="mytournamentdiv">
+    <ng-container *ngFor="let tournament of ownTourneyData?.tournaments">
+      <li><button (click)="activeTab = 'currTourney'; updateTournamentData(tournament.tournamentID)">{{ tournament.name }}</button></li>
+    </ng-container>
+  </ul>
 </div>
-<div [ngClass]="{show: activeTab=='pubTourneys', hide: activeTab!='pubTourneys'}">
+<div [ngClass]="{ show: activeTab=='pubTourneys', hide: activeTab!='pubTourneys'}">
   <h3>Public Tournaments</h3>
   <div class="publictournamentdiv">
-    <p>Tourney 1</p>
-    <p>Tourney 2</p>
-    <p>Etc...</p>
+    <ng-container *ngFor="let tournament of allTourneyData?.tournaments">
+      <li><button (click)="activeTab = 'currTourney'; updateTournamentData(tournament.tournamentID)">{{ tournament.name }}</button></li>
+    </ng-container>
   </div>
 </div>
 <div [ngClass]="{show: activeTab=='currTourney', hide: activeTab!='currTourney'}">
   <h3>Current Tournament: </h3>
   <p>Tournament information, schedule, matches played here...</p>
 
-  <p>Database file last updated on {{ data?.timestamp }}</p>
+  <p>Database file last updated on {{ tournamentData?.timestamp }}</p>
 
   <main id="tournament">
-    <ul class="round" *ngFor="let round of data?.matches">
+    <ul class="round" *ngFor="let round of tournamentData?.matches">
       <li class="spacer">&nbsp;</li>
 
       <ng-container *ngFor="let match of round">

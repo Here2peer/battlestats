@@ -10,18 +10,29 @@ import { TournamentService} from './tournament.service';
 export class TournamentComponent implements OnInit {
   public activeTab = 'myTourneys';
 
-  data: any;
+  tournamentData: any;
+  ownTourneyData: any;
+  allTourneyData: any;
 
   constructor(private tournamentService: TournamentService) { }
 
   ngOnInit() {
-    this.tournamentService.getTournamentData().subscribe((data: any) => {
-      console.log(data);
-      this.data = data;
+    this.tournamentService.getTournamentList('00000001').subscribe((tdata: any) => {
+      console.log(tdata);
+      this.ownTourneyData = tdata;
+      });
+    this.updateTournamentData('00000001');
+    this.tournamentService.getAllTourneys().subscribe((adata: any) => {
+      console.log(adata);
+      this.allTourneyData = adata;
     });
-    // TODO: Implement tournament builder function?
   }
 
-
+  updateTournamentData(tournamentID) {
+    this.tournamentService.getTournamentData(tournamentID).subscribe((data: any) => {
+      console.log(data);
+      this.tournamentData = data;
+    });
+  }
 
 }
