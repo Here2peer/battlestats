@@ -11,7 +11,8 @@
 }
 
 .team-overall-stats{
-  background: rgb(0,0,0,0.5);
+  background: rgb(3, 23, 55);
+  border-radius: 10px;
 }
 .top-row th{
   height: 40px;

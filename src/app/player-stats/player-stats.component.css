@@ -11,7 +11,8 @@
 }
 
 .player-overall-stats{
-  background: rgb(0,0,0,0.5);
+  background: rgb(3, 23, 55);
+  border-radius: 10px;
 }
 .top-row th{
   height: 40px;
@@ -45,7 +46,8 @@
 .player{
   max-width: 750px;
   text-align: center;
-  color: black;
+  background: rgb(3, 23, 55);
+  border-radius: 10px;
 }
 
 li{
@@ -59,7 +61,7 @@ li{
 
 }
 #ranking-container > div.ranking-alignment-box {
-  width: 16%; /* Declare your value. Can be in relative units. */
+  width: 14%; /* Declare your value. Can be in relative units. */
   display: inline-block;
   vertical-align: top;
   alignment: center;
@@ -75,8 +77,8 @@ li{
 .ranking-box{
   width: 150px;
   padding: 5px 15px;
-  background: rgb(230,90,37,0.5);
-  text-align: left;
+  background: rgb(3, 23, 55);
+  border-radius: 10px;
 }
 
 .ranking-title{
@@ -88,7 +90,8 @@ li{
 }
 
 .mat-grid-tile {
-  background: rgb(0,0,0,0.5);
+  background: rgb(3, 23, 55);
+  border-radius: 10px;
   color: white;
 
 }
@@ -98,7 +101,8 @@ li{
   color: lightgray;
 }
 .champions-container{
-  background: rgb(0,0,0,0.5);
+  background: rgb(3, 23, 55);
+  border-radius: 10px;
   margin-top: 1em;
   text-align: center;
 }

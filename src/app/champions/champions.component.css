@@ -13,10 +13,11 @@ li {
   display: inline-block;
   min-width: 8em;
   text-align: center;
-  background: #d36f15;
+  background: #031737;
   color: white;
   margin-right: 1em;
   margin-bottom: 1em;
+  border-radius: 10px;
 }
 
 .mat-card-header{
@@ -42,12 +43,12 @@ li {
 
 .buttons {
   display: none;
-  background: #a25410;
+  background: #031737;
 }
 
 .championGroup{
   display: none;
-  background: #a25410;
+  background: #031737;
   margin-top: 1em;
 }
 

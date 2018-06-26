@@ -22,7 +22,7 @@ export class ChartsComponent implements OnInit {
 
   barChartLabels = ['ranked2v2', 'unranked 2v2', 'ranked 3v3', 'unranked 3v3', 'brawl', 'battleground'];
   barChartType = 'bar';
-  barChartLegend = true;
+  barChartLegend = false;
   barChartData;
   private stats: any;
   public chartColors: Array<any> = [
