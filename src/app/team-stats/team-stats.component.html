@@ -28,52 +28,57 @@
     </tr>
   </table>
 </div>
-<div *ngIf="!teamstats">
-  <img src="../../assets/teamstats/giphy.gif" width="150px" height="150px" >
-</div>
-<div *ngIf="teamstats" >
-  <h3>Teams of player {{attribute.name}}</h3>
-  <div class="team-list">
-    <table>
-      <tr>
-        <th>Team name</th>
-        <th>Teammates</th>
-        <th>Wins</th>
-        <th>Losses</th>
-
-        <th class="small-filler"></th>
-
-        <th>Placement<br>games left</th>
-        <th>Current<br>league</th>
-        <th>Current<br>division</th>
-        <th>Top<br>league</th>
-        <th>Top<br>division</th>
-      </tr>
-        <ng-container *ngFor="let team of teamstats">
-          <tr>
-            <td *ngIf="team.attributes.name != '' ">{{team['attributes'].name}}</td>
-            <td *ngIf="team.attributes.name == '' " class="team-without-name">Nameless team</td>
-
-            <td>
-            <ng-container *ngFor="let id of team.attributes.stats.members" >
-              {{team.attributes.stats.member_names[id]}}
-            </ng-container>
-            </td>
-
-            <td>{{team.attributes.stats.wins}}</td>
-            <td>{{team.attributes.stats.losses}}</td>
-
-            <td></td>
-
-            <td>{{team.attributes.stats.placementGamesLeft}}</td>
-            <td>{{team.attributes.stats.league}}</td>
-            <td>{{team.attributes.stats.division}}</td>
-
-            <td>{{team.attributes.stats.topLeague}}</td>
-            <td>{{team.attributes.stats.topDivision}}</td>
-
-          </tr>
-        </ng-container>
-    </table>
+<div *ngIf="!error">
+  <div *ngIf="!teamstats">
+    <img src="../../assets/teamstats/giphy.gif" width="150px" height="150px" >
   </div>
+  <div *ngIf="teamstats" >
+    <h3>Teams of player {{attribute.name}}</h3>
+    <div class="team-list">
+      <table>
+        <tr>
+          <th>Team name</th>
+          <th>Teammates</th>
+          <th>Wins</th>
+          <th>Losses</th>
+
+          <th class="small-filler"></th>
+
+          <th>Placement<br>games left</th>
+          <th>Current<br>league</th>
+          <th>Current<br>division</th>
+          <th>Top<br>league</th>
+          <th>Top<br>division</th>
+        </tr>
+          <ng-container *ngFor="let team of teamstats">
+            <tr>
+              <td *ngIf="team.attributes.name != '' ">{{team['attributes'].name}}</td>
+              <td *ngIf="team.attributes.name == '' " class="team-without-name">Nameless team</td>
+
+              <td>
+              <ng-container *ngFor="let id of team.attributes.stats.members" >
+                {{team.attributes.stats.member_names[id]}}
+              </ng-container>
+              </td>
+
+              <td>{{team.attributes.stats.wins}}</td>
+              <td>{{team.attributes.stats.losses}}</td>
+
+              <td></td>
+
+              <td>{{team.attributes.stats.placementGamesLeft}}</td>
+              <td>{{team.attributes.stats.league}}</td>
+              <td>{{team.attributes.stats.division}}</td>
+
+              <td>{{team.attributes.stats.topLeague}}</td>
+              <td>{{team.attributes.stats.topDivision}}</td>
+
+            </tr>
+          </ng-container>
+      </table>
+    </div>
+  </div>
+</div>
+<div *ngIf="error">
+  <h3>Error: {{error}}</h3>
 </div>
