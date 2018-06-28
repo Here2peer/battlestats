@@ -61,7 +61,7 @@ li{
 
 }
 #ranking-container > div.ranking-alignment-box {
-  width: 14%; /* Declare your value. Can be in relative units. */
+  width: 14.285%; /* Declare your value. Can be in relative units. */
   display: inline-block;
   vertical-align: top;
   alignment: center;

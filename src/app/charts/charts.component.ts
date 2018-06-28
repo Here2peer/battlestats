@@ -12,7 +12,7 @@ export class ChartsComponent implements OnInit {
     scaleShowVerticalLines: false,
     responsive: true,
     scales: {
-    yAxes: [ { id: 'y-axis-1', type: 'linear', position: 'left', ticks: { min: 0, max: 100 , } }, ]},
+    xAxes: [ {stacked: true, id: 'y-axis-1', type: 'linear', position: 'left', ticks: { min: 0, max: 100 , } }, ]},
     legend: {
       labels: {
         fontColor: 'white'
@@ -21,7 +21,7 @@ export class ChartsComponent implements OnInit {
   };
 
   barChartLabels = ['ranked2v2', 'unranked 2v2', 'ranked 3v3', 'unranked 3v3', 'brawl', 'battleground'];
-  barChartType = 'bar';
+  barChartType = 'horizontalBar';
   barChartLegend = false;
   barChartData;
   private stats: any;
