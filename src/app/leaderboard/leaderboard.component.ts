@@ -37,7 +37,7 @@ export class LeaderboardComponent implements OnInit {
   sortData(sort: Sort) {
     const data = this.playerlist.slice();
     if (!sort.active || sort.direction === '') {
-      this.sortedData = data;
+      this.playerlist = data;
       return;
     }
 
