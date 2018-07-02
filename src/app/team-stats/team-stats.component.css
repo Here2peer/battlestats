@@ -56,3 +56,16 @@
 .small-filler {
   width: 5em;
 }
+
+.team-list{
+  background: rgb(3, 23, 55);
+  margin-top: 1em;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.title{
+  margin-left: 1em;
+}
