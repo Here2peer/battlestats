@@ -24,6 +24,10 @@
   margin: 0 auto;
 }
 
+.news{
+  color: #00050C;
+}
+
 
 /* RESPONSIVE */
 @media only screen and (max-width: 1000px) {
