@@ -30,7 +30,7 @@
 </div>
 <div *ngIf="!error">
   <div *ngIf="!teamstats">
-    <img src="../../assets/teamstats/giphy.gif" width="150px" height="150px" >
+    <mat-spinner class="spinner"></mat-spinner>
   </div>
   <div *ngIf="teamstats" >
     <h3 class="title">Teams of player {{attribute.name}}</h3>
