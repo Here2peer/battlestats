@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {PlayerService} from '../player-services/player.service';
 import {query} from '@angular/animations';
+import {Sort} from '@angular/material';
 
 @Component({
   selector: 'app-player-list',
@@ -17,6 +18,15 @@ export class PlayerListComponent implements OnInit {
 
   ngOnInit() {
     this.searchPlayers();
+  }
+
+  convertTime(seconds) {
+    console.log(seconds)
+    const minutes = seconds / 60;
+    console.log(minutes);
+    const hours = minutes / 60;
+    console.log(hours);
+    return Math.ceil(hours);
   }
 
   searchPlayers() {

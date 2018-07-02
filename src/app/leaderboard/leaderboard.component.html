@@ -1,0 +1,27 @@
+<div class="leaderboard">
+  <table matSort (matSortChange)="sortData($event)">
+    <tr>
+      <th mat-sort-header="Player name">Player name</th>
+      <th mat-sort-header="Winrate">Player id</th>
+      <th mat-sort-header="Ranked 2v2 wins">Player 2v2 ranked wins</th>
+      <th mat-sort-header="Ranked 3v3 wins">Player 3v3 ranked wins</th>
+      <th mat-sort-header="Unranked 2v2 wins">Player 2v2 unranked wins</th>
+      <th mat-sort-header="Unranked 3v3 wins">Player 3v3 unranked wins</th>
+      <th mat-sort-header="Time Played">Time played</th>
+      <th mat-sort-header="Winrate">Winrate</th>
+    </tr>
+
+    <tr *ngFor="let allpalyers of playerlist">
+      <td>{{allpalyers.battlerite_name}}</td>
+      <td>{{allpalyers.battlerite_id}}</td>
+      <td>{{allpalyers.twov2_ranked_wins}}</td>
+      <td>{{allpalyers.threev3_ranked_wins}}</td>
+      <td>{{allpalyers.twov2_unranked_wins}}</td>
+      <td>{{allpalyers.threev3_unranked_wins}}</td>
+      <td>{{allpalyers.time_played}}</td>
+      <td>{{allpalyers.winrate}}</td>
+      <td><button mat-button routerLink="/player/{{allpalyers.battlerite_name}}" >Show Player</button></td>
+    </tr>
+  </table>
+
+</div>
