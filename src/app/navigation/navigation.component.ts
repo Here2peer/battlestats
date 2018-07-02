@@ -27,6 +27,10 @@ export class NavigationComponent implements OnInit {
     this.router.navigate(['/player-list'], { queryParams: { playername: playername, search: 1}});
   }
 
+  toggle() {
+    this.navigationService.toggle();
+  }
+
 
 
 }
