@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { TournamentService} from './tournament.service';
+import {SteamComponent} from '../steam/steam.component';
+import {SteamService} from '../steam/steam.service';
 
 @Component({
   selector: 'app-tournament',
   templateUrl: './tournament.component.html',
-  styleUrls: ['./tournament.component.css']
+  styleUrls: ['./tournament.component.css'],
+  providers: [SteamService]
 })
 
 export class TournamentComponent implements OnInit {
@@ -13,8 +16,9 @@ export class TournamentComponent implements OnInit {
   tournamentData: any;
   ownTourneyData: any;
   allTourneyData: any;
+  steam: any;
 
-  constructor(private tournamentService: TournamentService) { }
+  constructor(private tournamentService: TournamentService, private steamservice: SteamService) { }
 
   ngOnInit() {
     this.tournamentService.getTournamentList('00000001').subscribe((tdata: any) => {
@@ -26,6 +30,8 @@ export class TournamentComponent implements OnInit {
       console.log(adata);
       this.allTourneyData = adata;
     });
+
+    this.steam = this.steamservice.getSteamUser();
   }
 
   updateTournamentData(tournamentID) {

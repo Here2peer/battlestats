@@ -22,11 +22,10 @@ export class SteamComponent implements OnInit {
       console.log(this.steamuser);
     }
     );*/
-    try{
-      this.steamuser = window.location.search.substr(1);
-    } catch(e) {
-      this.steamuser = 0;
-    }
-    console.log(this.steamuser);
+    this.steamuser = this.steamService.getSteamUser();
+  }
+
+  public getSteamUser() {
+    return this.steamuser;
   }
 }

@@ -16,7 +16,7 @@
 <!-- Tabs content -->
 <div [ngClass]="{show: activeTab=='myTourneys', hide: activeTab!='myTourneys'}">
   <h3>My Tournaments</h3>
-  <p>Create new tournament here [link]</p>
+  <p (click)="activeTab = 'newTourney'">Create new tournament here [link]</p>
   <h3>Tournaments</h3>
   <ul class="mytournamentdiv">
     <ng-container *ngFor="let tournament of ownTourneyData?.tournaments">
@@ -51,6 +51,44 @@
       </ng-container>
     </ul>
   </main>
+</div>
+<div [ngClass]="{show: activeTab=='newTourney', hide: activeTab!='newTourney'}">
+
+  <h3>Create new tournament</h3>
+  <p>Create a new tournament, fill out all values and hit the "submit" button to create a new tournament. User ID: {{steam}}</p>
+
+  <form action="http://localhost:5000/tournament/create" method="post">
+    <table>
+
+    <input type="hidden" name="playerID" value="{{steam}}">
+      <tr><td>Tournament name:</td><td><input type="text" name="tourneyName"></td></tr>
+      <tr><td>Tournament visibility:</td>
+    <td><select name="visibility">
+      <option value="public">Public</option>
+      <option value="private">Private</option>
+    </select></td>
+    </tr>
+      <tr><td>Number of teams:</td>
+      <td><select name="numTeams">
+        <option value="4">4</option>
+        <option value="8">8</option>
+        <option value="16">16</option>
+        <option value="32">32</option>
+        <option value="64">64</option>
+      </select></td>
+      </tr>
+      <tr>
+        <td>Number of players per team:</td>
+        <td><select name="playersPerTeam">
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select></td>
+      </tr>
+    <tr><td></td><td><input type="submit" value="Create"></td></tr>
+    </table>
+  </form>
+
+
 </div>
 </div>
 </div>
