@@ -35,20 +35,20 @@
   <div *ngIf="teamstats" >
     <h3 class="title">Teams of player {{attribute.name}}</h3>
     <div class="team-list">
-      <table>
+      <table matSort (matSortChange)="sortData($event)">
         <tr>
           <th>Team name</th>
           <th>Teammates</th>
-          <th>Wins</th>
-          <th>Losses</th>
+          <th mat-sort-header="Wins">Wins</th>
+          <th mat-sort-header="Losses">Losses</th>
 
           <th class="small-filler"></th>
 
-          <th>Placement<br>games left</th>
-          <th>Current<br>league</th>
-          <th>Current<br>division</th>
-          <th>Top<br>league</th>
-          <th>Top<br>division</th>
+          <th mat-sort-header="Games left">Placement<br>games left</th>
+          <th mat-sort-header="League">Current<br>league</th>
+          <th mat-sort-header="Division">Current<br>division</th>
+          <th mat-sort-header="Top league">Top<br>league</th>
+          <th mat-sort-header="Top division">Top<br>division</th>
         </tr>
           <ng-container *ngFor="let team of teamstats">
             <tr>

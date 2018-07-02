@@ -37,6 +37,10 @@
 .user{
 }
 
+button {
+  background: #07234F;
+}
+
 .user-image {
   height: 70px;
   float: left;
