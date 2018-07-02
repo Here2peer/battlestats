@@ -13,7 +13,7 @@ li {
   display: inline-block;
   min-width: 8em;
   text-align: center;
-  background: #031737;
+  background: #07234F;
   color: white;
   margin-right: 1em;
   margin-bottom: 1em;
@@ -76,7 +76,7 @@ li {
 }
 
 .champion.active{
-  width: 97%;
+  width: 94%;
   height: 126%;
   max-width: 100%;
   z-index: 2;
@@ -135,10 +135,12 @@ li {
 
 .battlecards {
   float: left;
+  min-width: 15em;
   max-width: 15em;
-  min-height: 24em; 'todo fix card height old value 24em'
+  min-height: 20em; 'todo fix card height old value 24em'
   margin-top: 1em;
   margin-left: 1em;
+  margin-top: 1em;
 }
 
 @media only screen and (max-width: 1000px) {
