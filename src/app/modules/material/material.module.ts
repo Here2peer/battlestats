@@ -9,7 +9,7 @@ import {
   MatButtonModule,
   MatButtonToggleModule,
   MatTabsModule,
-  MatInputModule, MatSortModule
+  MatInputModule, MatSortModule, MatProgressSpinnerModule
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -23,6 +23,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatButtonModule,
     MatButtonToggleModule,
     MatInputModule,
+    MatProgressSpinnerModule,
     MatSortModule,
     MatTabsModule,
     MatGridListModule
@@ -32,6 +33,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatCardModule,
     BrowserAnimationsModule,
     MatIconModule,
+    MatProgressSpinnerModule,
     MatMenuModule,
     MatButtonModule,
     MatButtonToggleModule,

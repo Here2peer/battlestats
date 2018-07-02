@@ -30,10 +30,10 @@
 </div>
 <div *ngIf="!error">
   <div *ngIf="!teamstats">
-    <img src="../../assets/teamstats/giphy.gif" width="150px" height="150px" >
+    <mat-spinner class="spinner"></mat-spinner>
   </div>
   <div *ngIf="teamstats" >
-    <h3>Teams of player {{attribute.name}}</h3>
+    <h3 class="title">Teams of player {{attribute.name}}</h3>
     <div class="team-list">
       <table>
         <tr>
@@ -57,7 +57,7 @@
 
               <td>
               <ng-container *ngFor="let id of team.attributes.stats.members" >
-                {{team.attributes.stats.member_names[id]}}
+                {{team.attributes.stats.formatted_member_names[id]}}
               </ng-container>
               </td>
 

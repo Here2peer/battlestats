@@ -79,12 +79,17 @@
         <div class="solo-ranked">Bg losses: {{stats[23]}}</div>
       </div>
     </div>
+
+    <div class="ranking-alignment-box">
+      <div class="ranking-box">
+       <app-charts></app-charts>
+      </div>
+    </div>
+
   </div>
 
 
-  <div class="champions-container">
-    <app-charts></app-charts>
-  </div>
+
   <div class="champions-container">
     <table matSort (matSortChange)="sortData($event)">
       <tr>

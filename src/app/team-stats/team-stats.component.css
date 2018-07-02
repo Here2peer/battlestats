@@ -11,7 +11,8 @@
 }
 
 .team-overall-stats{
-  background: rgb(0,0,0,0.5);
+  background: rgb(3, 23, 55);
+  border-radius: 10px;
 }
 .top-row th{
   height: 40px;
@@ -54,4 +55,23 @@
 
 .small-filler {
   width: 5em;
+}
+
+.team-list{
+  background: rgb(3, 23, 55);
+  margin-top: 1em;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.title{
+  margin-left: 1em;
+}
+
+.spinner{
+  margin: auto;
+  margin-top: 5px;
+  width: 50%;
 }
