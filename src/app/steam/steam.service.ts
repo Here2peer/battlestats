@@ -8,7 +8,15 @@ export class SteamService {
 
   constructor(private http: HttpClient) { }
 
+  steamuser: any;
+
   getSteamUser() {
-    return this.http.get('http://127.0.0.1:5000/steamuser');
+    try {
+      this.steamuser = window.location.search.substr(1);
+    } catch (e) {
+
+    }
+    console.log(this.steamuser);
+    return this.steamuser;
   }
 }
