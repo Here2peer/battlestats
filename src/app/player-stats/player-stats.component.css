@@ -37,6 +37,10 @@
 .user{
 }
 
+button {
+  background: #07234F;
+}
+
 .user-image {
   height: 70px;
   float: left;
@@ -69,6 +73,12 @@ li{
   *display: inline;
   zoom: 1;
 }
+
+.box-chart{
+  min-height: 20%;
+  margin-top: 1em;
+}
+
 #ranking-container:after {
   content: "";
   width: 100%;
@@ -76,6 +86,14 @@ li{
 }
 .ranking-box{
   width: 150px;
+  padding: 5px 15px;
+  background: rgb(3, 23, 55);
+  border-radius: 10px;
+}
+
+.chart{
+  width: 27%;
+  min-height: 10%;
   padding: 5px 15px;
   background: rgb(3, 23, 55);
   border-radius: 10px;

@@ -2,7 +2,7 @@
   <table *ngIf="search == 1">
     <tr>
       <th>Player name</th>
-      <th>Player id</th>
+      <th></th>
     </tr>
     <tr *ngFor="let players of playerlist">
       <td>{{players.attributes.name}}</td>
@@ -14,7 +14,7 @@
   <table *ngIf="search == undefined">
     <tr>
       <th>Player name</th>
-      <th>Player id</th>
+      <th></th>
     </tr>
     <tr *ngFor="let allpalyers of playerlist">
       <td>{{allpalyers.battlerite_name}}</td>
